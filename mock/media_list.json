@@ -1,0 +1,32 @@
+{
+    "code": 0,
+    "list": [
+        {
+            "id": "3",
+            "title": "Article Post Title",
+            "author": "Author Slot",
+            "short_desc": "This is Intro",
+            "icon": "http://admin.shooincareer.com/File/image/fab55b769570e43ef425c04b99773d54.jpg",
+            "word": "Test",
+            "color": "#66cc33"
+        },
+        {
+            "id": "2",
+            "title": "fdfdf",
+            "author": "123",
+            "short_desc": "3333",
+            "icon": "http://admin.shooincareer.com/File/image/bf394c87c12739741fea603ffb0e05b1.jpg",
+            "word": "Test",
+            "color": "#66cc33"
+        },
+        {
+            "id": "1",
+            "title": "test",
+            "author": "gg",
+            "short_desc": "123",
+            "icon": "http://admin.shooincareer.com/File/image/52eee0f9fab0f7127257d391ba2ab0ca.jpg",
+            "word": "Test",
+            "color": "#66cc33"
+        }
+    ]
+}
