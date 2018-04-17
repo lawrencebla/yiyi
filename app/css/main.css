@@ -3921,9 +3921,11 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
 /*------------- #FRIENDS --------------*/
 .friend-header-thumb {
   border-bottom: 1px solid #e6ecf5;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #ff5e3a; }
   .friend-header-thumb img {
-    width: 100%; }
+    width: 100%;
+    opacity: 0; }
 
 .friend-item {
   border-radius: 5px;

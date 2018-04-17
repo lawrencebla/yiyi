@@ -133,7 +133,8 @@ function MD5(str) {
 
 (function(global, $) {
 	var KEY = '319812e05ffdb4e0c94548ccefe8f8ac';
-	var URL = 'http://api.shooincareer.com/index.php';
+    // var URL = 'http://api.shooincareer.com/index.php';
+	var URL = 'http://localhost:8000';
 	var APP_ID = 4;
 	var M = 'Api';
 
@@ -174,7 +175,11 @@ function MD5(str) {
             }
 			param = param || {};
 			param.timestamp = +Date.now().toString().substr(0, 10);
-			$.post(URL, makeParams(action, param), function(reslutStr) {
+            var sortParam = {};
+            Object.keys(param).sort().map(function(key){
+                sortParam[key] = param[key];
+            });
+			$.post(URL, makeParams(action, sortParam), function(reslutStr) {
 				try {
 					var result = JSON.parse(reslutStr);
 					var errorCode = result.return;

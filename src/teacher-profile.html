@@ -28,14 +28,44 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.min.css">
 
-	<script src="js/yiyi/ajax.js"></script>
-	<script src="js/yiyi/init.js"></script>
-
 </head>
 <body>
 
+<script type="text/yemplate" id='teacher_introduction'>
+<div class="ui-block">
+	<article class="hentry post">
+		<div class="post__author author vcard inline-items">
+			<img src="img/author-page.jpg" alt="author">
+			<div class="author-date">
+				<a class="h6 post__author-name fn" href="javascript:void(0)">James Spiegel</a>
+			</div>
+		</div>
+		<p class="teacher-introduction">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+			pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+			mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+			accusantium doloremque.
+		</p>
+	</article>
+</div>
+</script>
 
-
+<script type="text/yemplate" id='teacher_desc'>
+<div class="ui-block features-video" style="    align-items: flex-start;">
+	<div class="video-player" style="width: 50%;">
+		<img src="img/video9.jpg" alt="photo" style="height: 300px;">
+	</div>
+	<div class="features-video-content" style="width: 50%;">
+		<article class="hentry post" style="border-bottom: none;">
+			<div class="post__author author vcard inline-items">
+				<div class="author-date">
+					<a class="h6 post__author-name fn" href="javascript:void(0)">James Spiegel</a>
+				</div>
+			</div>
+			<p class="teacher-desc">Last Saturday we went with <a href="#"> Mathilda Brinker</a> to the “Rock Garden Festival” and had a blast! Here’s a small video of one of us in the crowd.</p>
+		</article>
+	</div>
+</div>
+</script>
 
 <!-- Fixed Sidebar Left -->
 
@@ -577,16 +607,16 @@
 			<div class="ui-block">
 				<div class="top-header">
 					<div class="top-header-thumb">
-						<img src="img/top-header1.jpg" alt="nature">
+						<img style="height: 389px;" src="img/top-header1.jpg" alt="nature">
 					</div>
 					<div class="profile-section" style='height: 120px;'></div>
 					<div class="top-header-author">
-						<a href="02-ProfilePage.html" class="author-thumb">
+						<a href="javascript:void(0)" class="author-thumb">
 							<img src="img/author-main1.jpg" alt="author">
 						</a>
 						<div class="author-content">
-							<a href="02-ProfilePage.html" class="h4 author-name">James Spiegel</a>
-							<div class="country">San Francisco, CA</div>
+							<a href="javascript:void(0)" class="h4 author-name">James Spiegel</a>
+							<div class="country">Professional Teacher</div>
 						</div>
 					</div>
 				</div>
@@ -596,100 +626,7 @@
 </div>
 
 <!-- ... end Top Header-Profile -->
-<div class="container" style="padding: 50px;">
-	<div class="ui-block">
-		<article class="hentry post">
-
-			<div class="post__author author vcard inline-items">
-				<img src="img/author-page.jpg" alt="author">
-
-				<div class="author-date">
-					<a class="h6 post__author-name fn" href="02-ProfilePage.html">James Spiegel</a>
-					<div class="post__date">
-						<time class="published" datetime="2017-03-24T18:18">
-							19 hours ago
-						</time>
-					</div>
-				</div>
-
-				<div class="more">
-					<svg class="olymp-three-dots-icon">
-						<use xlink:href="svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use>
-					</svg>
-					<ul class="more-dropdown">
-						<li>
-							<a href="#">Edit Post</a>
-						</li>
-						<li>
-							<a href="#">Delete Post</a>
-						</li>
-						<li>
-							<a href="#">Turn Off Notifications</a>
-						</li>
-						<li>
-							<a href="#">Select as Featured</a>
-						</li>
-					</ul>
-				</div>
-
-			</div>
-
-			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-				pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-				accusantium doloremque.
-			</p>
-
-
-		</article>
-	</div>
-
-	<div class="ui-block features-video" style="    align-items: flex-start;">
-		<div class="video-player" style="width: 50%;">
-			<img src="img/video9.jpg" alt="photo" style="height: 300px;">
-			<a href="https://youtube.com/watch?v=excVFQ2TWig" class="play-video">
-				<svg class="olymp-play-icon"><use xlink:href="#olymp-play-icon"></use></svg>
-			</a>
-	
-			<div class="video-content">
-				<div class="h4 title">Rock Garden Festival - Day 3</div>
-				<time class="published" datetime="2017-03-24T18:18">12:06</time>
-			</div>
-	
-			<div class="overlay"></div>
-		</div>
-	
-		<div class="features-video-content" style="width: 50%;">
-	
-			<article class="hentry post" style="border-bottom: none;">
-	
-				<div class="post__author author vcard inline-items">
-					
-	
-					<div class="author-date">
-						<a class="h6 post__author-name fn" href="02-ProfilePage.html">James Spiegel</a>
-						<div class="post__date">
-							<time class="published" datetime="2017-03-24T18:18">
-								2 hours ago
-							</time>
-						</div>
-					</div>
-	
-					
-	
-				</div>
-	
-				<p>Last Saturday we went with <a href="#"> Mathilda Brinker</a> to the “Rock Garden Festival” and had a blast! Here’s a small video of one of us in the crowd.</p>
-	
-			</article>
-	
-			
-	
-			
-	
-		</div>
-	
-	</div>
+<div class="container teacher-container" style="padding: 50px;">
 </div>
 
 
@@ -734,6 +671,9 @@
 
 <script src="Bootstrap/dist/js/bootstrap.bundle.js"></script>
 
+<script src="js/yiyi/ajax.js"></script>
+<script src="js/yiyi/init.js"></script>
+<script src="js/yiyi/teacher-profile.js"></script>
 
 </body>
 </html>

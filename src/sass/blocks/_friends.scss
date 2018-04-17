@@ -4,9 +4,11 @@
 .friend-header-thumb {
   border-bottom: 1px solid $border-color;
   overflow: hidden;
+  background-color: #ff5e3a;
 
   img {
 	width: 100%;
+	opacity: 0;
   }
 }
 
