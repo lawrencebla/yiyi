@@ -713,24 +713,29 @@
 		<div class="ui-block-title">
 			<h6 class="title">File Upload</h6>
 		</div>
-
-		<div class="ui-block-content">
-			<form class="form-group label-floating">
+<!-- application/x-www-form-urlencoded -->
+		<form enctype="multipart/form-data" class="ui-block-content" id="upload-file-form" action="http://api.shooincareer.com/index.php" method="post">
+			<div class="form-group label-floating">
 				<label class="control-label">File Name</label>
 				<input class="form-control" placeholder="" value="Highschool Friends" type="text">
-			</form>
+				<input type="hidden" name="phone" value="18253591067">
+			</div>
 
-			<form class="form-group with-button label-floating">
+			<div class="form-group with-button label-floating">
 				<label class="control-label">Lesson</label>
 				<input class="form-control" placeholder="" value="Group Avatar (120x120px min)" type="text">
 
 				<button class="bg-grey">
 					<svg class="olymp-computer-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-computer-icon"></use></svg>
 				</button>
+				<input type="hidden" name="type" value="1">
 
-			</form>
+			</div>
 
-			<form class="form-group label-floating is-select">
+			<div class="form-group label-floating is-select">
+				<input type="hidden" name="name" value="aaa">
+				<input type="hidden" name="lesson_id" value="8">
+				<input type="file" name="file">
 				<label class="control-label">Select File</label>
 				<svg class="olymp-happy-face-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-happy-face-icon"></use></svg>
 
@@ -777,15 +782,14 @@
 					</option>
 
 				</select>
-			</form>
+			</div>
 
-			<a href="#" class="btn btn-blue btn-lg full-width">Create Group</a>
-		</div>
+			<a href="javascript:void(0)" class="upload-file-btn btn btn-blue btn-lg full-width">Create Group</a>
+		</form>
 
 
 	</div>
 </div>
-
 <!-- ... end Window-popup Create Friends Group -->
 
 
@@ -831,6 +835,7 @@
 
 <script src="js/yiyi/ajax.js"></script>
 <script src="js/yiyi/init.js"></script>
+<script src="js/yiyi/file-uploads.js"></script>
 
 </body>
 </html>

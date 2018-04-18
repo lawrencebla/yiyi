@@ -133,8 +133,8 @@ function MD5(str) {
 
 (function(global, $) {
 	var KEY = '319812e05ffdb4e0c94548ccefe8f8ac';
-    // var URL = 'http://api.shooincareer.com/index.php';
-	var URL = 'http://localhost:8000';
+    var URL = 'http://api.shooincareer.com/index.php';
+	// var URL = 'http://localhost:8000';
 	var APP_ID = 4;
 	var M = 'Api';
 
@@ -225,4 +225,40 @@ function MD5(str) {
 			alert('请求异常');
 		}
 	};
+
+    global.yploadForm = function(action, form, cb) {
+        var param = {};
+        form.find('input').map( function(idx, input) {
+            if( input.name && input.type !== 'file' ) {
+                param[input.name] = input.value;
+            }
+        } );
+        param.timestamp = +Date.now().toString().substr(0, 10);
+        var sortParam = {};
+        Object.keys(param).sort().map(function(key){
+            sortParam[key] = param[key];
+        });
+        var serializeParam = makeParams(action, sortParam);
+        var formData = new FormData();
+        for( var key in serializeParam ) {
+            formData.append(key, serializeParam[key]);
+        }
+        form.find('input:file')
+            .filter(function(idx, input){return input.name})
+            .map(function(idx, input){
+                formData.append(input.name, input.files[0]);
+            });
+
+        $.ajax({
+            url: URL,
+            type: 'POST',
+            cache: false,
+            data: formData,
+            processData: false,
+            contentType: false
+        }).done(function(res) {
+            var result = JSON.parse(res);
+            cb(result);
+        }).fail(function(res) {}); 
+    }
 })(window, jQuery);

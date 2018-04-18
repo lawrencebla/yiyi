@@ -28,14 +28,39 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.min.css">
 
-	<script src="js/yiyi/ajax.js"></script>
-	<script src="js/yiyi/init.js"></script>
-
 </head>
 <body>
 
 
-
+<script type="text/yemplate" id='chapters'>
+<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 sorting-item community">
+	<div class="ui-block">
+		<article class="hentry blog-post blog-post-v2">
+			<div class="post-thumb">
+				<img style="height: 364px;" src="img/post1.jpg" alt="photo">
+			</div>
+			<div class="post-content">
+				<a href="#" class="post-category bg-blue-light" style='padding: 8px 50px;'></a>
+				<a href="#" class="post-title" style="color: #888da7"></a>
+			</div>
+			<div class="friend-count" data-swiper-parallax="-500">
+				<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
+					<div class="level-num">-</div>
+					<div class="title">English Level</div>
+				</a>
+				<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
+					<div class="words-num">-</div>
+					<div class="title">Vocabulary Words</div>
+				</a>
+				<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
+					<div class="dialogs-num">-</div>
+					<div class="title">Dialogue</div>
+				</a>
+			</div>
+		</article>
+	</div>
+</div>
+</script>
 
 <!-- Fixed Sidebar Left -->
 
@@ -74,25 +99,25 @@
 					</a>
 				</li>
 				<li id='side-curriculum'>
-					<a href="#" class="js-sidebar-open">
+					<a href="#">
 						<svg class="olymp-status-icon left-menu-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-status-icon"></use></svg>
 						<span class="left-menu-title">Curriculum</span>
 					</a>
 				</li>
 				<li id='side-file-uploads'>
-					<a href="#" class="js-sidebar-open">
+					<a href="#">
 						<svg class="olymp-checked-calendar-icon left-menu-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-checked-calendar-icon"></use></svg>
 						<span class="left-menu-title">File Uploads</span>
 					</a>
 				</li>
 				<li id='side-purchases'>
-					<a href="#" class="js-sidebar-open">
+					<a href="#">
 						<svg class="olymp-shopping-bag-icon left-menu-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-shopping-bag-icon"></use></svg>
 						<span class="left-menu-title">Purchases</span>
 					</a>
 				</li>
 				<li id='side-settings'>
-					<a href="#" class="js-sidebar-open">
+					<a href="#">
 						<svg class="olymp-settings-icon left-menu-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-settings-icon"></use></svg>
 						<span class="left-menu-title">Settings</span>
 					</a>
@@ -577,7 +602,7 @@
 			<div class="ui-block">
 				<div class="top-header">
 					<div class="top-header-thumb">
-						<img src="img/top-header1.jpg" alt="nature">
+						<img style="height: 389px;" src="img/top-header1.jpg" alt="nature">
 					</div>
 				</div>
 			</div>
@@ -586,113 +611,8 @@
 </div>
 
 <!-- ... end Top Header-Profile -->
-<div class="container" style='padding: 50px'>
+<div class="container chapters-container" style='padding: 50px'>
 	<div class="row sorting-container" id="posts-grid-1" data-layout="masonry">
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 sorting-item community">
-				<div class="ui-block">
-
-					
-					<!-- Post -->
-					
-					<article class="hentry blog-post blog-post-v2">
-						<div class="post-thumb">
-							<img src="img/post1.jpg" alt="photo">
-						</div>
-						<div class="post-content">
-							<a href="#" class="post-category bg-blue-light" style='padding: 8px 50px;'>CHAPTER 1</a>
-							<a href="#" class="post-title" style="color: #888da7">Here’s the Featured Urban photo of August! </a>
-					
-						</div>
-						<div class="friend-count" data-swiper-parallax="-500">
-							<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
-								<div>52</div>
-								<div class="title">Lessons</div>
-							</a>
-							<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
-								<div>240</div>
-								<div class="title">Lessons</div>
-							</a>
-							<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
-								<div>16</div>
-								<div class="title">Lessons</div>
-							</a>
-						</div>
-					</article>
-					
-					<!-- ... end Post -->
-
-				</div>
-			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 sorting-item community">
-				<div class="ui-block">
-
-					
-					<!-- Post -->
-					
-					<article class="hentry blog-post blog-post-v2">
-						<div class="post-thumb">
-							<img src="img/post1.jpg" alt="photo">
-						</div>
-						<div class="post-content">
-							<a href="#" class="post-category bg-blue-light" style='padding: 8px 50px;'>CHAPTER 1</a>
-							<a href="#" class="post-title" style="color: #888da7">Here’s the Featured Urban photo of August! </a>
-					
-						</div>
-						<div class="friend-count" data-swiper-parallax="-500">
-							<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
-								<div>52</div>
-								<div class="title">Lessons</div>
-							</a>
-							<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
-								<div>240</div>
-								<div class="title">Lessons</div>
-							</a>
-							<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
-								<div>16</div>
-								<div class="title">Lessons</div>
-							</a>
-						</div>
-					</article>
-					
-					<!-- ... end Post -->
-
-				</div>
-			</div>
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 sorting-item community">
-				<div class="ui-block">
-
-					
-					<!-- Post -->
-					
-					<article class="hentry blog-post blog-post-v2">
-						<div class="post-thumb">
-							<img src="img/post1.jpg" alt="photo">
-						</div>
-						<div class="post-content">
-							<a href="#" class="post-category bg-blue-light" style='padding: 8px 50px;'>CHAPTER 1</a>
-							<a href="#" class="post-title" style="color: #888da7">Here’s the Featured Urban photo of August! </a>
-					
-						</div>
-						<div class="friend-count" data-swiper-parallax="-500">
-							<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
-								<div>52</div>
-								<div class="title">Lessons</div>
-							</a>
-							<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
-								<div>240</div>
-								<div class="title">Lessons</div>
-							</a>
-							<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
-								<div>16</div>
-								<div class="title">Lessons</div>
-							</a>
-						</div>
-					</article>
-					
-					<!-- ... end Post -->
-
-				</div>
-			</div>
 	</div>
 </div>
 
@@ -738,6 +658,9 @@
 
 <script src="Bootstrap/dist/js/bootstrap.bundle.js"></script>
 
+<script src="js/yiyi/ajax.js"></script>
+<script src="js/yiyi/init.js"></script>
+<script src="js/yiyi/curriculum.js"></script>
 
 </body>
 </html>

@@ -11,6 +11,14 @@
   background-color: #fff;
 }
 
+.chapter-overview-desc {
+  display: flex;
+  & .btn {
+    margin-bottom: 0px;
+    margin-right: 10px;
+  }
+}
+
 .chapter-overview-label {
   font-size: 24px;
   color: #bdc0cd;

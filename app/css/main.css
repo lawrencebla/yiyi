@@ -2484,6 +2484,13 @@ img {
   padding: 50px;
   background-color: #fff; }
 
+.chapter-overview-desc {
+  display: -ms-flexbox;
+  display: flex; }
+  .chapter-overview-desc .btn {
+    margin-bottom: 0px;
+    margin-right: 10px; }
+
 .chapter-overview-label {
   font-size: 24px;
   color: #bdc0cd;

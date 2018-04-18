@@ -32,7 +32,20 @@
 </head>
 <body>
 
+<script type="text/yemplate" id='chapters'>
+<div class="ui-block">
+	<article class="hentry post">
+		<div class="post__author author vcard inline-items">
+			<div class="author-date">
+				<a class="h6 post__author-name fn" href="javascript:void(0)"></a>
+			</div>
 
+		</div>
+
+		<p class="curriculum-desc"></p>
+	</article>
+</div>
+</script>
 
 
 <!-- Fixed Sidebar Left -->
@@ -72,25 +85,25 @@
 					</a>
 				</li>
 				<li id='side-curriculum'>
-					<a href="#" class="js-sidebar-open">
+					<a href="#">
 						<svg class="olymp-status-icon left-menu-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-status-icon"></use></svg>
 						<span class="left-menu-title">Curriculum</span>
 					</a>
 				</li>
 				<li id='side-file-uploads'>
-					<a href="#" class="js-sidebar-open">
+					<a href="#">
 						<svg class="olymp-checked-calendar-icon left-menu-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-checked-calendar-icon"></use></svg>
 						<span class="left-menu-title">File Uploads</span>
 					</a>
 				</li>
 				<li id='side-purchases'>
-					<a href="#" class="js-sidebar-open">
+					<a href="#">
 						<svg class="olymp-shopping-bag-icon left-menu-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-shopping-bag-icon"></use></svg>
 						<span class="left-menu-title">Purchases</span>
 					</a>
 				</li>
 				<li id='side-settings'>
-					<a href="#" class="js-sidebar-open">
+					<a href="#">
 						<svg class="olymp-settings-icon left-menu-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-settings-icon"></use></svg>
 						<span class="left-menu-title">Settings</span>
 					</a>
@@ -575,16 +588,16 @@
 			<div class="ui-block">
 				<div class="top-header">
 					<div class="top-header-thumb">
-						<img src="img/top-header1.jpg" alt="nature">
+						<img style="height: 389px" src="img/top-header1.jpg">
 					</div>
 					<div class="profile-section" style='height: 120px;'></div>
 					<div class="top-header-author">
-						<a href="02-ProfilePage.html" class="author-thumb">
-							<img src="img/author-main1.jpg" alt="author">
+						<a href="javascript:void(0)" class="author-thumb">
+							<img style="width: 120px; height: 120px" src="img/author-main1.jpg" alt="author">
 						</a>
 						<div class="author-content">
-							<a href="02-ProfilePage.html" class="h4 author-name">James Spiegel</a>
-							<div class="country">San Francisco, CA</div>
+							<a href="javascript: void(0)" class="h4 author-name">James Spiegel</a>
+							<div class="country">Professional Teacher</div>
 						</div>
 					</div>
 				</div>
@@ -594,17 +607,17 @@
 </div>
 
 <!-- ... end Top Header-Profile -->
-<div class="container" style="padding: 50px;">
+<div class="container curriculum-overview-container" style="padding: 50px;">
 	<div class="row">
 		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
 			<div class="ui-block">
 				<div class="ui-block-content">
-					<div class="">
-						<a href="#" class="btn btn-control bg-breez">
-							<svg class="olymp-stats-arrow"><use xlink:href="svg-icons/sprites/icons.svg#olymp-stats-arrow"></use></svg>
+					<div class="chapter-overview-desc">
+						<a style="cursor: inherit; background-color: #1fb8fc" class="btn btn-control bg-breez">
+							<svg class="olymp-stats-arrow"><use xlink:href="svg-icons/sprites/icons.svg#olymp-stats-icon"></use></svg>
 						</a>
 						<div class="chapter-overview-label">
-							Difficulty
+							English Level
 						</div>
 					</div>
 				</div>
@@ -613,12 +626,12 @@
 		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
 			<div class="ui-block">
 				<div class="ui-block-content">
-					<div>
-						<a href="#" class="btn btn-control bg-breez">
-							<svg class="olymp-stats-arrow"><use xlink:href="svg-icons/sprites/icons.svg#olymp-stats-arrow"></use></svg>
+					<div class="chapter-overview-desc">
+						<a style="cursor: inherit; background-color: #fc5f42" class="btn btn-control bg-breez">
+							<svg class="olymp-stats-arrow"><use xlink:href="svg-icons/sprites/icons.svg#olymp-star-icon"></use></svg>
 						</a>
 						<div class="chapter-overview-label">
-							Vocabulary
+							Vocabulary Words
 						</div>
 					</div>
 				</div>
@@ -627,12 +640,12 @@
 		<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
 			<div class="ui-block">
 				<div class="ui-block-content">
-					<div>
-						<a href="#" class="btn btn-control bg-breez">
-							<svg class="olymp-stats-arrow"><use xlink:href="svg-icons/sprites/icons.svg#olymp-stats-arrow"></use></svg>
+					<div class="chapter-overview-desc">
+						<a style="cursor: inherit; background-color: #916fd2" class="btn btn-control bg-breez">
+							<svg class="olymp-stats-arrow"><use xlink:href="svg-icons/sprites/icons.svg#olymp-chat---messages-icon"></use></svg>
 						</a>
 						<div class="chapter-overview-label">
-							Lessons
+							Dialogue
 						</div>
 					</div>
 				</div>
@@ -640,66 +653,7 @@
 		</div>
 	</div>
 
-	<div class="ui-block">
-
-		<!-- Post -->
-		
-		<article class="hentry post">
-		
-			<div class="post__author author vcard inline-items">
-				<img src="img/author-page.jpg" alt="author">
-	
-				<div class="author-date">
-					<a class="h6 post__author-name fn" href="02-ProfilePage.html">James Spiegel</a>
-					<div class="post__date">
-						<time class="published" datetime="2017-03-24T18:18">
-							19 hours ago
-						</time>
-					</div>
-				</div>
-	
-			</div>
-	
-			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-				pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-				accusantium doloremque.
-			</p>
-		</article>
-		
-		<!-- .. end Post -->
-	</div>
-	<div class="ui-block">
-
-		<!-- Post -->
-		
-		<article class="hentry post">
-		
-			<div class="post__author author vcard inline-items">
-				<img src="img/author-page.jpg" alt="author">
-	
-				<div class="author-date">
-					<a class="h6 post__author-name fn" href="02-ProfilePage.html">James Spiegel</a>
-					<div class="post__date">
-						<time class="published" datetime="2017-03-24T18:18">
-							19 hours ago
-						</time>
-					</div>
-				</div>
-	
-			</div>
-	
-			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-				pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-				accusantium doloremque.
-			</p>
-		</article>
-		
-		<!-- .. end Post -->
-	</div>
-
-	<div class="ui-block" style="padding: 0 25px;">
+	<!-- <div class="ui-block" style="padding: 0 25px;">
 		
 		<div class="row">
 			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -879,7 +833,7 @@
 				
 			</div>
 		</div>
-	</div>
+	</div> -->
 </div>
 
 
@@ -924,6 +878,9 @@
 
 <script src="Bootstrap/dist/js/bootstrap.bundle.js"></script>
 
+<script src="js/yiyi/ajax.js"></script>
+<script src="js/yiyi/init.js"></script>
+<script src="js/yiyi/curriculum-overview.js"></script>
 
 </body>
 </html>

@@ -24,10 +24,10 @@
 			'side-notification': 'notifications.html',
 			'side-my-classes': 'my-classes.html',
 			'side-teacher-profile': 'teacher-profile.html',
-			'side-curriculum': 'curriculum.html',
+			'side-curriculum': 'curriculum.html|curriculum-overview.html',
 			'side-file-uploads': 'file-uploads.html',
-			'side-purchases': 'billing.html',
-			'side-settings': 'person-info.html',
+			'side-purchases': '',
+			'side-settings': 'person-info.html|family-info.html|change-password.html|billing.html|contact-us.html',
 		}
 
 		var $leftMenu = $('.left-menu');
@@ -39,7 +39,7 @@
 			if( 
 				(currentFile && filesName.indexOf(currentFile) !== -1 )|| 
 				( currentPath.indexOf('.html') === -1 && filesName.indexOf('index.html') === 0 ) ) {
-				$link.addClass('actived')
+				$link.addClass('actived');
 			}
 			$link.prop('href', filesName.split('|')[0]);
 		}
