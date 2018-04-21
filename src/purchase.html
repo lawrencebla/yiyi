@@ -27,6 +27,19 @@
 	<!-- Main Styles CSS -->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.min.css">
+	<style type="text/css">
+	.crumina-heading {
+		margin-top: 30px;
+	}
+	.pruchase-container {
+		background-color: #fff;
+		margin-top: 60px !important;
+		margin-bottom: 60px !important;
+	}
+	.radio label span {
+		top: 5px;
+	}
+	</style>
 
 </head>
 <body>
@@ -337,8 +350,78 @@
 
 <!-- ... end Top Header-Profile -->
 <div class="container">
-	<div class="container-content">
+	<div class="row">
+		<div class="col-xl-10 m-auto col-lg-10 col-md-12 col-sm-12 col-xs-12 pruchase-container">
+			<form action="#" method="post" class="cart-main">
+				<table class="shop_table cart">
+					<thead>
+						<tr>
+							<th class="product-thumbnail">ITEM</th>
+							<th class="product-lesson"># of Lessons</th>
+							<th class="product-subtotal">TOTAL</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="cart_item">
+							<td class="product-thumbnail">
+								<div class="cart-product__item">
+									<a href="img/product-small1.png" class="product-thumb js-zoom-image">
+										<img src="img/product-small1.png" alt="product" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image">
+									</a>
+									<div class="cart-product-content">
+										<a href="#" class="product-category">COFFEE MUGS</a>
+										<a href="#" class="h6 cart-product-title">White Enamel Mug</a>
+										<ul class="rait-stars">
+											<li>
+												<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
+											</li>
+											<li>
+												<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
+											</li>
+					
+											<li>
+												<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
+											</li>
+											<li>
+												<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
+											</li>
+											<li>
+												<i class="far fa-star star-icon" aria-hidden="true"></i>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</td>
+					
+							<td class="product-lesson">
+								<h6 class="price amount">10</h6>
+							</td>
+					
+							<td class="product-subtotal">
+								<h6 class="total amount">$40</h6>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+			<div class="crumina-module crumina-heading with-title-decoration">
+				<h5 class="heading-title">Payment Method</h5>
+			</div>
 
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios">
+					<img style="height: 25px;" class="first-img"  src="img/wechat.jpg">Wechat
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" checked>
+					<img style="height: 25px;" class="first-img"  src="img/alipay.jpeg">Alipay
+				</label>
+			</div>
+			<a href="#" class="btn btn-blue btn-lg full-width">Buy</a>
+		</div>
 	</div>
 </div>
 
@@ -386,7 +469,7 @@
 
 <script src="js/yiyi/ajax.js"></script>
 <script src="js/yiyi/init.js"></script>
-<script src="js/yiyi/index.js"></script>
+<script src="js/yiyi/pruchase.js"></script>
 
 </body>
 </html>

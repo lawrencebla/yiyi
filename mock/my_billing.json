@@ -1,0 +1,19 @@
+{
+	"code": 0,
+	"list": [
+		{
+			"type": 0,
+			"chapter": "Chapter1",
+			"classes_num": 10,
+			"amount": 40,
+			"date": "2010-09-09"
+		},
+		{
+			"type": 1,
+			"chapter": "Chapter2",
+			"classes_num": 20,
+			"amount": 30,
+			"date": "2010-09-08"
+		}
+	]
+}

@@ -11,6 +11,7 @@
 
 	<!-- Main Font -->
     <script src="js/webfontloader.min.js"></script>
+    
     <script>
         WebFont.load({
             google: {
@@ -28,12 +29,100 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.min.css">
 
+	<style type="text/css">
+
+		.dropdown-menu .inner>li{
+			background-color: #fff;
+		}
+
+		.select-lesson-icon {
+			width: 50px;
+			border-radius: 0 5px 5px 0;
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 100%;
+			text-align: center;
+			line-height: 100%;
+			color: #fff;
+			fill: #fff;
+			background-color: #d7d9e5;
+			border: none;
+			padding: 1px 7px 2px;
+		}
+		.file-input {
+			opacity: 0;
+		}
+		.file-input-label {
+			display: block;
+		    width: 100%;
+		    font-size: .875rem;
+		    color: #464a4c;
+		    background-color: transparent;
+		    background-image: none;
+		    background-clip: padding-box;
+		    border: 1px solid #e6ecf5;
+		    border-radius: 0.25rem;
+		    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+		    padding: 1.5rem 1.1rem .5rem;
+		    line-height: 1.75;
+		    position: absolute;
+		    top: 0px;
+		    left: 0px;
+		}
+		.fa {
+			font-weight: 400;
+			display: flex;
+		    height: 100%;
+		    align-items: center;
+		    justify-content: center;
+		}
+		.fa.file-icon {
+			color: #fff;
+			font-size: 50px;
+		}
+	</style>
+
 
 </head>
 <body>
 
-
-
+<script type="text/yemplate" id='file_upload_item'>
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	<div class="ui-block" data-mh="friend-groups-item">
+		<div class="friend-item friend-groups">
+			<div class="friend-item-content">
+				<div class="friend-avatar">
+					<div class="author-thumb">
+						<div class="file-icon"></div>
+					</div>
+					<div class="author-content">
+						<a href="javscript:void(0)" class="h5 author-name file-name"></a>
+						<div class="country file-type">6 Friends in the Group</div>
+					</div>
+				</div>
+				<ul class="friends-harmonic">
+					<li class="file-uploads-user">
+						<a href="javscript:void(0)">
+							<img src="img/friend-harmonic5.jpg" alt="friend">
+						</a>
+						<span class="file-uploads-user-name"></span>
+					</li>
+				</ul>
+				<div class="control-block-button">
+					<a href="javscript:void(0)" class="  btn btn-control bg-blue" data-toggle="modal"  data-target="#upload-file-modal">
+						<div class="fa fa-edit"></div>
+					</a>
+					<a href="javscript:void(0)" class="btn btn-control btn-grey-lighter delete-file-upload">
+						<div class="fa fa-trash-alt"></div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</script>
 
 <!-- Fixed Sidebar Left -->
 
@@ -584,7 +673,7 @@
 </div>
 
 <!-- ... end Top Header-Profile -->
-<div class="container" style="padding: 50px">
+<div class="container file-upload-container" style="padding: 50px">
 
 	<div class="row">
 		<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -593,15 +682,15 @@
 			
 			<div class="friend-item friend-groups create-group" data-mh="friend-groups-item">
 			
-				<a href="#" class="  full-block" data-toggle="modal" data-target="#create-friend-group-1"></a>
+				<!-- <a href="#" class="  full-block" data-toggle="modal" data-target="#upload-file-modal"></a> -->
 				<div class="content">
 			
-					<a href="#" class="  btn btn-control bg-blue" data-toggle="modal" data-target="#create-friend-group-1">
+					<a href="#" class="  btn btn-control bg-blue" data-toggle="modal" data-id="" data-target="#upload-file-modal">
 						<svg class="olymp-plus-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-plus-icon"></use></svg>
 					</a>
 			
 					<div class="author-content">
-						<a href="#" class="h5 author-name">File Upload</a>
+						<a href="javascript:void(0)" class="h5 author-name">File Upload</a>
 						<div class="country">It only takes a few mintues!</div>
 					</div>
 			
@@ -610,102 +699,13 @@
 			</div>
 			
 			<!-- ... end Friend Item -->		</div>
-
-		<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-			<div class="ui-block" data-mh="friend-groups-item">
-				
-				<!-- Friend Item -->
-				
-				<div class="friend-item friend-groups">
-				
-					<div class="friend-item-content">
-				
-						<div class="friend-avatar">
-							<div class="author-thumb">
-								<img src="img/logo.png" alt="Olympus">
-							</div>
-							<div class="author-content">
-								<a href="#" class="h5 author-name">My Family</a>
-								<div class="country">6 Friends in the Group</div>
-							</div>
-						</div>
-				
-						<ul class="friends-harmonic">
-							<li class="file-uploads-user">
-								<a href="#">
-									<img src="img/friend-harmonic5.jpg" alt="friend">
-								</a>
-								<span>James</span>
-							</li>
-						</ul>
-				
-				
-						<div class="control-block-button">
-							<a href="#" class="  btn btn-control bg-blue" data-toggle="modal" data-target="#create-friend-group-add-friends">
-								<svg class="olymp-happy-faces-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-happy-faces-icon"></use></svg>
-							</a>
-				
-							<a href="#" class="btn btn-control btn-grey-lighter">
-								<svg class="olymp-settings-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-settings-icon"></use></svg>
-							</a>
-				
-						</div>
-					</div>
-				</div>
-				
-				<!-- ... end Friend Item -->			</div>
-		</div>
-
-		<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-			<div class="ui-block" data-mh="friend-groups-item">
-				
-				<!-- Friend Item -->
-				
-				<div class="friend-item friend-groups">
-				
-					<div class="friend-item-content">
-						<div class="friend-avatar">
-							<div class="author-thumb">
-								<img src="img/logo.png" alt="Olympus">
-							</div>
-							<div class="author-content">
-								<a href="#" class="h5 author-name">My Family</a>
-								<div class="country">6 Friends in the Group</div>
-							</div>
-						</div>
-				
-						<ul class="friends-harmonic">
-							<li class="file-uploads-user">
-								<a href="#">
-									<img src="img/friend-harmonic5.jpg" alt="friend">
-								</a>
-								<span>James</span>
-							</li>
-						</ul>
-				
-				
-						<div class="control-block-button">
-							<a href="#" class="  btn btn-control bg-blue" data-toggle="modal" data-target="#create-friend-group-add-friends">
-								<svg class="olymp-happy-faces-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-happy-faces-icon"></use></svg>
-							</a>
-				
-							<a href="#" class="btn btn-control btn-grey-lighter">
-								<svg class="olymp-settings-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-settings-icon"></use></svg>
-							</a>
-				
-						</div>
-					</div>
-				</div>
-				
-				<!-- ... end Friend Item -->			</div>
-		</div>
 	</div>
 </div>
 
 <!-- Window-popup Create Friends Group -->
 
-<div class="modal fade" id="create-friend-group-1">
-	<div class="modal-dialog ui-block window-popup create-friend-group create-friend-group-1">
+<div class="modal fade" id="upload-file-modal">
+	<div class="modal-dialog ui-block window-popup create-friend-group upload-file-modal">
 		<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
 			<svg class="olymp-close-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-close-icon"></use></svg>
 		</a>
@@ -715,76 +715,33 @@
 		</div>
 <!-- application/x-www-form-urlencoded -->
 		<form enctype="multipart/form-data" class="ui-block-content" id="upload-file-form" action="http://api.shooincareer.com/index.php" method="post">
+			<input type="hidden" name="phone" value="">
+				<input type="hidden" name="type" value="">
 			<div class="form-group label-floating">
 				<label class="control-label">File Name</label>
-				<input class="form-control" placeholder="" value="Highschool Friends" type="text">
-				<input type="hidden" name="phone" value="18253591067">
-			</div>
-
-			<div class="form-group with-button label-floating">
-				<label class="control-label">Lesson</label>
-				<input class="form-control" placeholder="" value="Group Avatar (120x120px min)" type="text">
-
-				<button class="bg-grey">
-					<svg class="olymp-computer-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-computer-icon"></use></svg>
-				</button>
-				<input type="hidden" name="type" value="1">
-
+				<input name="name" class="form-control" placeholder="" value="File Name" type="text">
 			</div>
 
 			<div class="form-group label-floating is-select">
-				<input type="hidden" name="name" value="aaa">
-				<input type="hidden" name="lesson_id" value="8">
-				<input type="file" name="file">
-				<label class="control-label">Select File</label>
-				<svg class="olymp-happy-face-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-happy-face-icon"></use></svg>
+				<label class="control-label">Lesson</label>
+				<input name="lesson_id" type="hidden">
 
-				<select class="selectpicker form-control style-2 show-tick" multiple data-max-options="2" data-live-search="true">
-					<option title="Green Goo Rock" data-content='<div class="inline-items">
-										<div class="author-thumb">
-											<img src="img/avatar52-sm.jpg" alt="author">
-										</div>
-											<div class="h6 author-title">Green Goo Rock</div>
-
-										</div>'>Green Goo Rock
-					</option>
-
-					<option title="Mathilda Brinker" data-content='<div class="inline-items">
-											<div class="author-thumb">
-												<img src="img/avatar74-sm.jpg" alt="author">
-											</div>
-											<div class="h6 author-title">Mathilda Brinker</div>
-										</div>'>Mathilda Brinker
-					</option>
-
-					<option title="Marina Valentine" data-content='<div class="inline-items">
-											<div class="author-thumb">
-												<img src="img/avatar48-sm.jpg" alt="author">
-											</div>
-											<div class="h6 author-title">Marina Valentine</div>
-										</div>'>Marina Valentine
-					</option>
-
-					<option title="Dave Marinara" data-content='<div class="inline-items">
-											<div class="author-thumb">
-												<img src="img/avatar75-sm.jpg" alt="author">
-											</div>
-											<div class="h6 author-title">Dave Marinara</div>
-										</div>'>Dave Marinara
-					</option>
-
-					<option title="Rachel Howlett" data-content='<div class="inline-items">
-											<div class="author-thumb">
-												<img src="img/avatar76-sm.jpg" alt="author">
-											</div>
-											<div class="h6 author-title">Rachel Howlett</div>
-										</div>'>Rachel Howlett
-					</option>
-
+				<select class="lesson-select selectpicker form-control style-2 show-tick">
 				</select>
+				<button class="select-lesson-icon">
+					<svg class="olymp-computer-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-computer-icon"></use></svg>
+				</button>
+
 			</div>
 
-			<a href="javascript:void(0)" class="upload-file-btn btn btn-blue btn-lg full-width">Create Group</a>
+			<div class="form-group label-floating">
+				<label class="control-label">Select File</label>
+				<input class="file-input" type="file" name="file" id="file">
+				<label class="file-input-label" for="file">Please Select File</label>
+				<svg class="olymp-happy-face-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-happy-face-icon"></use></svg>
+			</div>
+
+			<a href="javascript:void(0)" class="upload-file-btn btn btn-blue btn-lg full-width">Upload</a>
 		</form>
 
 
@@ -829,7 +786,7 @@
 <script src="js/mediaelement-playlist-plugin.min.js"></script>
 
 <script src="js/base-init.js"></script>
-<script defer src="fonts/fontawesome-all.js"></script>
+<!-- <script defer src="fonts/fontawesome-all.js"></script> -->
 
 <script src="Bootstrap/dist/js/bootstrap.bundle.js"></script>
 

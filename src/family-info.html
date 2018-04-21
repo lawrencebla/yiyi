@@ -28,7 +28,11 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.min.css">
 
-
+	<style type="text/css">
+	.your-profile-menu>.selected>a {
+		color: #515264;
+	}
+	</style>
 </head>
 <body>
 
@@ -588,6 +592,9 @@
 
 	<div class="row">
 		<div class="col-xl-9 order-xl-2 col-lg-9 order-lg-2 col-md-12 order-md-1 col-sm-12 col-xs-12">
+			<div style="display: none;" class="alert alert-success" role="alert">
+			  Saved!
+			</div>
 			<div class="ui-block">
 				<div class="ui-block-title">
 					<h6 class="title">Family Information</h6>
@@ -597,27 +604,26 @@
 					
 					<!-- Personal Information Form  -->
 					
-					<form>
+					<form id="family_info_form">
 						<div class="row">
-					
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="form-group label-floating">
 									<label class="control-label">Full Name</label>
-									<input class="form-control" placeholder="" type="text" value="James">
+									<input name="username" class="form-control" placeholder="" type="text" value="">
 								</div>
 							</div>
 
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="form-group label-floating">
 									<label class="control-label">Relationship</label>
-									<input class="form-control" placeholder="" type="text" value="Father">
+									<input name="relationship" class="form-control" placeholder="" type="text" value="">
 								</div>
 							</div>
 
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="form-group date-time-picker label-floating">
 									<label class="control-label">Your Birthday</label>
-									<input name="datetimepicker" value="10/24/1984" />
+									<input name="birthday" value="" />
 									<span class="input-group-addon">
 										<svg class="olymp-month-calendar-icon icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-month-calendar-icon"></use></svg>
 									</span>
@@ -625,56 +631,56 @@
 							</div>
 						
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<div class="form-group label-floating is-empty">
+								<div class="form-group label-floating">
 									<label class="control-label">Phone Number</label>
-									<input class="form-control" placeholder="" type="text">
+									<input name="phone" class="form-control" placeholder="" type="text">
 								</div>
 							</div>
 
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<div class="form-group label-floating is-empty">
+								<div class="form-group label-floating">
 									<label class="control-label">Wechat</label>
-									<input class="form-control" placeholder="" type="text">
+									<input name="wechat" class="form-control" placeholder="" type="text">
 								</div>
 							</div>
 
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 								<div class="form-group label-floating">
 									<label class="control-label">Email</label>
-									<input class="form-control" placeholder="" type="email" value="jspiegel@yourmail.com">
+									<input name="email" class="form-control" placeholder="" type="email" value="">
 								</div>
 							</div>
 
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<div class="form-group label-floating is-empty">
+								<div class="form-group label-floating">
 									<label class="control-label">Address</label>
-									<input class="form-control" placeholder="" type="text">
+									<input name="address" class="form-control" placeholder="" type="text">
 								</div>
 							</div>
 
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<div class="form-group label-floating is-empty">
+								<div class="form-group label-floating">
 									<label class="control-label">City</label>
-									<input class="form-control" placeholder="" type="text">
+									<input name="city" class="form-control" placeholder="" type="text">
 								</div>
 							</div>
 
 							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-								<div class="form-group label-floating is-empty">
+								<div class="form-group label-floating">
 									<label class="control-label">State</label>
-									<input class="form-control" placeholder="" type="text">
+									<input name="state" class="form-control" placeholder="" type="text">
 								</div>
 							</div>
 
 							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-								<div class="form-group label-floating is-empty">
+								<div class="form-group label-floating">
 									<label class="control-label">Country</label>
-									<input class="form-control" placeholder="" type="text">
+									<input name="country" class="form-control" placeholder="" type="text">
 								</div>
 							</div>
 
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<button class="btn btn-primary btn-lg full-width">Save all Changes</button>
+								<div class="update-info btn btn-primary btn-lg full-width">Save all Changes</div>
 							</div>
 						</div>
 					</form>
@@ -709,7 +715,7 @@
 									<li>
 										<a href="person-info.html">Personal</a>
 									</li>
-									<li>
+									<li class="selected">
 										<a href="family-info.html">Family</a>
 									</li>
 									<li>
@@ -778,6 +784,9 @@
 
 <script src="Bootstrap/dist/js/bootstrap.bundle.js"></script>
 
+<script src="js/yiyi/ajax.js"></script>
+<script src="js/yiyi/init.js"></script>
+<script src="js/yiyi/family-info.js"></script>
 
 </body>
 </html>

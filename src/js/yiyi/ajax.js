@@ -133,8 +133,8 @@ function MD5(str) {
 
 (function(global, $) {
 	var KEY = '319812e05ffdb4e0c94548ccefe8f8ac';
-    var URL = 'http://api.shooincareer.com/index.php';
-	// var URL = 'http://localhost:8000';
+    // var URL = 'http://api.shooincareer.com/index.php';
+	var URL = 'http://localhost:8000';
 	var APP_ID = 4;
 	var M = 'Api';
 

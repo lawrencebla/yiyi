@@ -1,0 +1,32 @@
+{
+    "code": 0,
+    "list": [
+        {
+            "type": "1",
+            "link": "www.qq.com",
+            "title": "测试2",
+            "intro": "测测123123测测测测试",
+            "icon": "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png",
+            "color": "000033",
+            "word": "Travel"
+        },
+        {
+            "type": "2",
+            "link": "www.baidu.com",
+            "title": "测试",
+            "intro": "测测测测测测试",
+            "icon": "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png",
+            "color": "00cc33",
+            "word": "Travel"
+        },
+        {
+            "type": "3",
+            "link": "www.baidu.com",
+            "title": "测试",
+            "intro": "测测测测测测试",
+            "icon": "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png",
+            "color": "00cc33",
+            "word": "Travel"
+        }
+    ]
+}

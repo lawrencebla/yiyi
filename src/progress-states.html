@@ -32,8 +32,19 @@
 </head>
 <body>
 
-
-
+<script type="text/yemplate" id='state_item'>
+<div class="ui-block">
+	<div class="birthday-item inline-items badges">
+		<div class="author-thumb">
+			<img style="width: 38px; height: 38px;" src="img/badge1.png" alt="author">
+		</div>
+		<div class="birthday-author-name">
+			<a href="javascript:void(0)" class="h6 author-name"></a>
+			<div class="birthday-date"></div>
+		</div>
+	</div>
+</div>
+</script>
 
 <!-- Fixed Sidebar Left -->
 
@@ -586,341 +597,7 @@
 <!-- ... end Top Header-Profile -->
 <div class="container" style='padding: 50px;'>
 	<div class="row">
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge1.png" alt="author">
-						<div class="label-avatar bg-primary">2</div>
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Olympian User</a>
-						<div class="birthday-date">Congratulations! You have been in the Olympus community for 2 years.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 76%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge2.png" alt="author">
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Favourite Creator</a>
-						<div class="birthday-date">You created a favourite page.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 100%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge3.png" alt="author">
-						<div class="label-avatar bg-blue">4</div>
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Friendly User</a>
-						<div class="birthday-date">You have more than 80 friends. Next Tier: 150 Friends. </div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 52%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge4.png" alt="author">
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Professional Photographer</a>
-						<div class="birthday-date">You have uploaded more than 500 images to your profile.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 100%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge5.png" alt="author">
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Expert Filmaker</a>
-						<div class="birthday-date">You have uploaded more than 80 videos to your profile.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 70%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge6.png" alt="author">
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Mightier Than The Sword</a>
-						<div class="birthday-date">You have written more than 50 blog post entries.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 23%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge7.png" alt="author">
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Universe Explorer</a>
-						<div class="birthday-date">You have visited more than 1000 different user profiles.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 100%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge8.png" alt="author">
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Nothing to Hide</a>
-						<div class="birthday-date">You have completed all your profile fields.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 100%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge9.png" alt="author">
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Messaging Master</a>
-						<div class="birthday-date">You have messaged with at least 20 different people.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 69%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge10.png" alt="author">
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Musical Sharer</a>
-						<div class="birthday-date">You have linked your Spotify account to share your playlist.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 33%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge11.png" alt="author">
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Superliked Hero</a>
-						<div class="birthday-date">You have collected more than 100 likes in one post.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 100%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge12.png" alt="author">
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Strongly Caffeinated </a>
-						<div class="birthday-date">You have written more than 1000 posts.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 65%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge13.png" alt="author">
-						<div class="label-avatar bg-breez">2</div>
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Events Promoter</a>
-						<div class="birthday-date">You have created more than 25 public or private events. Next Tier: 50.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 100%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge14.png" alt="author">
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Friendship Cultivator</a>
-						<div class="birthday-date">You have tagged friends on 200 different posts.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 80%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
-			<div class="ui-block">
-
-				
-				<div class="birthday-item inline-items badges">
-					<div class="author-thumb">
-						<img src="img/badge15.png" alt="author">
-					</div>
-					<div class="birthday-author-name">
-						<a href="#" class="h6 author-name">Phantom Profile</a>
-						<div class="birthday-date">You haven’t posted anything on your profile for more than 1 month.</div>
-					</div>
-				
-					<div class="skills-item">
-						<div class="skills-item-meter">
-							<span class="skills-item-meter-active" style="width: 100%"></span>
-						</div>
-					</div>
-				
-				</div>
-
-			</div>
-
+		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 states-container">
 		</div>
 	</div>
 </div>
@@ -967,6 +644,9 @@
 
 <script src="Bootstrap/dist/js/bootstrap.bundle.js"></script>
 
+<script src="js/yiyi/ajax.js"></script>
+<script src="js/yiyi/init.js"></script>
+<script src="js/yiyi/progress-states.js"></script>
 
 </body>
 </html>

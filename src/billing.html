@@ -28,11 +28,24 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.min.css">
 
+	<style type="text/css">
+	.your-profile-menu>.selected>a {
+		color: #515264;
+	}
+	</style>
 
 </head>
 <body>
 
-
+<script type="text/yemplate" id='billing_item'>
+<li>
+	<span class="date"></span>
+	<span class="position bold"></span>
+	<span class="type bold"></span>
+	<span class="town-place"></span>
+	<span class="method"></span>
+</li>
+</script>
 
 
 <!-- Fixed Sidebar Left -->
@@ -604,7 +617,7 @@
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 m-auto">
 
 						
-						<ul class="table-careers">
+						<ul class="table-careers billing-container">
 							<li class="head">
 								<span>DATE</span>
 								<span>PACKAGE</span>
@@ -613,45 +626,6 @@
 								<span>PAY METHOD</span>
 							</li>
 						
-							<li>
-								<span class="date">03/12/2017</span>
-								<span class="position bold">UI/UX Designer</span>
-								<span class="type bold">Full Time</span>
-								<span class="town-place">San Francisco, CA</span>
-								<span><a href="#" class="btn btn-primary btn-sm full-width" data-toggle="modal" data-target="#edit-my-poll-popup">Apply Now!</a></span>
-							</li>
-						
-							<li>
-								<span class="date">03/09/2017</span>
-								<span class="position bold">Social Media Manager</span>
-								<span class="type bold">Part Time</span>
-								<span class="town-place">Austin, TX</span>
-								<span><a href="#" class="btn btn-primary btn-sm full-width" data-toggle="modal" data-target="#edit-my-poll-popup">Apply Now!</a></span>
-							</li>
-						
-							<li>
-								<span class="date">02/27/2017</span>
-								<span class="position bold">Senior Developer</span>
-								<span class="type bold">Full Time</span>
-								<span class="town-place">San Francisco, CA</span>
-								<span><a href="#" class="btn btn-primary btn-sm full-width" data-toggle="modal" data-target="#edit-my-poll-popup">Apply Now!</a></span>
-							</li>
-						
-							<li>
-								<span class="date">02/24/2017</span>
-								<span class="position bold">Content Reviewer</span>
-								<span class="type bold">Remote</span>
-								<span class="town-place">United States</span>
-								<span><a href="#" class="btn btn-primary btn-sm full-width" data-toggle="modal" data-target="#edit-my-poll-popup">Apply Now!</a></span>
-							</li>
-						
-							<li>
-								<span class="date">02/24/2017</span>
-								<span class="position bold">Customer Service Manager</span>
-								<span class="type bold">Full Time</span>
-								<span class="town-place">New York, NY</span>
-								<span><a href="#" class="btn btn-primary btn-sm full-width" data-toggle="modal" data-target="#edit-my-poll-popup">Apply Now!</a></span>
-							</li>
 						</ul>
 
 					</div>
@@ -690,7 +664,7 @@
 									<li>
 										<a href="change-password.html">Change Password</a>
 									</li>
-									<li>
+									<li class="selected">
 										<a href="billing.html">Billing</a>
 									</li>
 									<li>
@@ -756,6 +730,7 @@
 
 <script src="js/yiyi/ajax.js"></script>
 <script src="js/yiyi/init.js"></script>
+<script src="js/yiyi/billing.js"></script>
 
 </body>
 </html>

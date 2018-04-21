@@ -1,4 +1,22 @@
 (function(global, $) {
+	var typeMap = {
+		1: {
+			icon: 'olymp-comments-post-icon',
+			link: 'my-classes.html',
+			color: '#0d74bc',
+		},
+		2: {
+			icon: 'olymp-status-icon',
+			link: 'progress-feedbacks.html',
+			color: '#fcb040',
+		},
+		3: {
+			icon: 'olymp-computer-icon',
+			link: 'notifications.html',
+			color: '#00a550',
+		},
+	}
+
 	function yemplate(id) {
 		return $($('#' + id).html());
 	}
@@ -26,7 +44,7 @@
 			'side-teacher-profile': 'teacher-profile.html',
 			'side-curriculum': 'curriculum.html|curriculum-overview.html',
 			'side-file-uploads': 'file-uploads.html',
-			'side-purchases': '',
+			'side-purchases': 'purchase.html',
 			'side-settings': 'person-info.html|family-info.html|change-password.html|billing.html|contact-us.html',
 		}
 
@@ -46,7 +64,111 @@
 
 	}
 
-	initSidebar();
+	function initTopbar() {
+
+		$('#site-header>.control-block>.control-icon.more')
+			.find('.label-avatar').css('display', 'none')
+			.parent()
+			.find('.notification-list').empty();
+
+		var phone = global.getPhone();
+		global.yjax('status', {
+			phone: phone,
+			page: 1,
+		}, function(data) {
+			if( data.code === 0 ) {
+				if( data.list.length > 0 ) {
+					var more = $('#more-status');
+					more.find('.label-avatar')
+						.css('display', 'block')
+						.text(data.list.length);
+
+					data.list.map( function( item ) {
+						more.find('.notification-list')
+							.append(
+							'<li>' + 
+								'<div class="author-thumb">' + 
+									'<img style="height: 34px; width: 34px;" src="' + item.avatar + '" alt="author">' + 
+								'</div>' + 
+								'<div class="notification-event">' + 
+									'<div>' + item.content + '</div>' +
+									'<span class="notification-date">' + 
+										'<span>' + item.ymd + '</span>' + 
+								'</div>' + 
+							'</li>'
+							);
+					} );
+				}
+			}
+		});
+		global.yjax('feedback', {
+			phone: phone,
+			page: 1,
+		}, function(data) {
+			if( data.code === 0 ) {
+				if( data.list.length > 0 ) {
+					var more = $('#more-feedback');
+					more.find('.label-avatar')
+						.css('display', 'block')
+						.text(data.list.length);
+
+					data.list.map( function( item ) {
+						more.find('.notification-list')
+							.append(
+							'<li>' + 
+								'<div class="author-thumb">' + 
+									'<img style="height: 34px; width: 34px;" src="' + item.avatar + '" alt="author">' + 
+								'</div>' + 
+								'<div class="notification-event">' + 
+									'<div>' + item.content + '</div>' +
+									'<span class="notification-date">' + 
+										'<span>' + item.ymd + '</span>' + 
+								'</div>' + 
+							'</li>'
+							);
+					} );
+				}
+			}
+		});
+		global.yjax('feed', {
+			phone: phone,
+			page: 1,
+		}, function(data) {
+			if( data.code === 0 ) {
+				if( data.list.length > 0 ) {
+					var more = $('#more-feed');
+					more.find('.label-avatar')
+						.css('display', 'block')
+						.text(data.list.length);
+
+					data.list.map( function( item ) {
+						var info = typeMap[item.type];
+						more.find('.notification-list')
+							.append(
+							'<li>' + 
+								'<div class="author-thumb">' + 
+									'<img style="height: 34px; width: 34px;" src="' + item.icon + '" alt="author">' + 
+								'</div>' + 
+								'<div class="notification-event">' + 
+									'<div>' + item.intro + '</div>' +
+									'<span class="notification-date">' + 
+										// '<span>' + item.ymd + '</span>' + 
+								'</div>' + 
+								'<span class="notification-icon">' +
+									'<a href="' + info.link + '" class="accept-request" style="border-radius: 20px; background-color: ' + info.color + '">' +
+										'<span class="">' +
+											'<svg class="' + info.icon + '">' +
+												'<use xlink:href="svg-icons/sprites/icons.svg#' + info.icon + '"></use>' + 
+											'</svg>' + 
+										'</span>' +
+									'</a>' +
+							'</li>'
+							);
+					} );
+				}
+			}
+		});
+	}
 
 	global.yemplate = yemplate;
 	global.yuery = yuery;
@@ -86,4 +208,7 @@
 	global.getPhone = function() {
 		return +(global.yookie.get('phone') || 18253591067);
 	}
+
+	initTopbar();
+	initSidebar();
 })(window, jQuery);

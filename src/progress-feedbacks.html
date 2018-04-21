@@ -32,7 +32,40 @@
 </head>
 <body>
 
+<script type="text/yemplate" id='feedback_item'>
+<table class="event-item-table">
+	<tbody>
+	<tr class="event-item">
 
+		<td class="upcoming" style="width: 30px;">
+			<div class="date-event">
+
+				<svg class="olymp-small-calendar-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-small-calendar-icon"></use></svg>
+
+				<span class="day"></span>
+				<span class="month"></span>
+			</div>
+		</td>
+		<td class="author">
+			<div class="event-author inline-items">
+				<div class="author-thumb">
+					<img style="width: 38px; height: 38px;" src="img/avatar66-sm.jpg" alt="author">
+				</div>
+				<div class="author-date">
+					<a href="javascript:void(0)" class="author-name h6"></a>
+					<time class="published" datetime="2017-03-24T18:18"></time>
+				</div>
+			</div>
+		</td>
+		<td class="description">
+			<p class="description"></p>
+		</td>
+		<td class="add-event">
+		</td>
+	</tr>
+	</tbody>
+</table>
+</script>
 
 
 <!-- Fixed Sidebar Left -->
@@ -587,56 +620,12 @@
 <div class="container" style='padding: 30px'>
 	<div class="row">
 		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<div class="ui-block">
+			<div class="ui-block feedback-container">
 
-				<div class="ui-block-title ui-block-title-small">
-					<h6 class="title">UPCOMING EVENTS 2016</h6>
-				</div>
-
-				
-				<table class="event-item-table">
-					<tbody>
-					<tr class="event-item">
-				
-						<td class="upcoming">
-							<div class="date-event">
-				
-								<svg class="olymp-small-calendar-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-small-calendar-icon"></use></svg>
-				
-								<span class="day">28</span>
-								<span class="month">may</span>
-							</div>
-						</td>
-						<td class="author">
-							<div class="event-author inline-items">
-								<div class="author-thumb">
-									<img src="img/avatar66-sm.jpg" alt="author">
-								</div>
-								<div class="author-date">
-									<a href="#" class="author-name h6">Green Goo in Gotham</a>
-									<time class="published" datetime="2017-03-24T18:18">Saturday at 9:00pm</time>
-								</div>
-							</div>
-						</td>
-						<td class="description">
-							<p class="description">We’ll be playing in the Gotham Bar in May. Come and have a great time with us! Entry: $12</p>
-						</td>
-						<td class="add-event">
-							<a href="20-CalendarAndEvents-MonthlyCalendar.html" class="btn btn-breez btn-sm">Add to Calendar</a>
-						</td>
-				
-					</tr>
-					</tbody>
-				</table>
-
-				<div class="ui-block-title ui-block-title-small">
-					<h6 class="title">PAST EVENTS</h6>
-				</div>
-
-				<div class="no-past-events">
+				<!-- <div class="no-past-events">
 					<svg class="olymp-month-calendar-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-month-calendar-icon"></use></svg>
 					<span>There are no past events <br/>to show</span>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -684,6 +673,9 @@
 
 <script src="Bootstrap/dist/js/bootstrap.bundle.js"></script>
 
+<script src="js/yiyi/ajax.js"></script>
+<script src="js/yiyi/init.js"></script>
+<script src="js/yiyi/progress-feedbacks.js"></script>
 
 </body>
 </html>
