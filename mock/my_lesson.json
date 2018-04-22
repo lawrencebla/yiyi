@@ -1,1 +1,59 @@
-{"code":0,"list":[{"week":"\u661f\u671f\u4e8c","cancel":"0","year":"2018","month":"4","day":"18","start":"9:00","end":"9:25","name":"Test Lesson","icon":"http:\/\/admin.shooincareer.com\/File\/other\/681c8357a233689902f8aa2f4c58e1dd.jpg","id":"8","lesson_link":"http:\/\/admin.shooincareer.com\/File\/zip\/9a58efeb6ee293e09d0d21fed7fc1e0a\/demo\/index.html","pre_link":"http:\/\/admin.shooincareer.com\/File\/zip\/d274d4aef5acf0b93f34e252f0900e22\/demo\/index.html","home_link":"http:\/\/admin.shooincareer.com\/File\/zip\/a337455cf46606ac2b6874286caa37b0\/demo\/index.html","flag_home":false,"flag_pre":false,"flag_lesson":false},{"week":"\u661f\u671f\u4e8c","cancel":"1","year":"2018","month":"4","day":"20","start":"9:00","end":"9:25","name":"2","icon":"http:\/\/admin.shooincareer.com\/File\/other\/910db9a25f5e87ba18be12157179eb6c.jpg","id":"9","lesson_link":"http:\/\/admin.shooincareer.com\/File\/zip\/4b11f3d7b475b521676e3ce15026a109\/demo\/index.html","pre_link":"http:\/\/admin.shooincareer.com\/File\/zip\/14a113a025d4a28d25778f704c899c8b\/demo\/index.html","home_link":"http:\/\/admin.shooincareer.com\/File\/zip\/9bd3c4506bc1cef59b78de5851f8ca41\/demo\/index.html","flag_home":false,"flag_pre":false,"flag_lesson":false},{"week":"\u661f\u671f\u4e00","cancel":"1","year":"2018","month":"4","day":"23","start":"9:00","end":"9:25","name":"3","icon":"http:\/\/admin.shooincareer.com\/File\/other\/cdaf23bb38767c864e94ff16645c1660.jpg","id":"10","lesson_link":"http:\/\/admin.shooincareer.com\/File\/zip\/21d978923af6c04aa60c4c9ca452011e\/demo\/index.html","pre_link":"http:\/\/admin.shooincareer.com\/File\/zip\/42b05edc85bc01812cdf967830ced480\/demo\/index.html","home_link":"http:\/\/admin.shooincareer.com\/File\/zip\/9fdbc42f90d0284f9299cf981788d24f\/demo\/index.html","flag_home":false,"flag_pre":false,"flag_lesson":false},{"week":"\u661f\u671f\u4e8c","cancel":"1","year":"2018","month":"4","day":"25","start":"9:00","end":"9:25","name":"ttt","icon":"http:\/\/admin.shooincareer.com\/File\/other\/fa00cbf00a4c0ede893f76980bea4307.jpg","id":"11","lesson_link":"http:\/\/admin.shooincareer.com\/File\/zip\/3b63f827304977aad248c6d81e244f54\/content\/index.html","pre_link":"http:\/\/admin.shooincareer.com\/File\/zip\/a15f510bef47b6d33044db5ffb8de82b\/content\/index.html","home_link":"http:\/\/admin.shooincareer.com\/File\/zip\/6a669b580d560104216907be7d6d8cf8\/content\/index.html","flag_home":false,"flag_pre":false,"flag_lesson":false},{"week":"\u661f\u671f\u4e8c","cancel":"1","year":"2018","month":"4","day":"27","start":"9:00","end":"9:25","name":"hhh","icon":"http:\/\/admin.shooincareer.com\/File\/other\/e88e509d9246468403f241d63b4b0d8d.jpg","id":"12","lesson_link":"http:\/\/admin.shooincareer.com\/File\/zip\/b8b397e1576e48f7bc3104e60e21147f\/content\/index.html","pre_link":"http:\/\/admin.shooincareer.com\/File\/zip\/ed7e231bae28be490cb88731dec6d507\/content\/index.html","home_link":"http:\/\/admin.shooincareer.com\/File\/zip\/eb38bc4af9550b84a83384d5941e7d68\/content\/index.html","flag_home":false,"flag_pre":false,"flag_lesson":false}]}
+{
+    "code": 0,
+    "list": [
+        {
+            "week": "星期一",
+            "cancel": "0",
+            "year": "2018",
+            "month": "4",
+            "day": "23",
+            "start": "9:00",
+            "end": "9:25",
+            "name": "3",
+            "icon": "http://admin.shooincareer.com/File/other/cdaf23bb38767c864e94ff16645c1660.jpg",
+            "id": "10",
+            "lesson_link": "http://admin.shooincareer.com/File/zip/21d978923af6c04aa60c4c9ca452011e/demo/index.html",
+            "pre_link": "http://admin.shooincareer.com/File/zip/42b05edc85bc01812cdf967830ced480/demo/index.html",
+            "home_link": "http://admin.shooincareer.com/File/zip/9fdbc42f90d0284f9299cf981788d24f/demo/index.html",
+            "flag_home": false,
+            "flag_pre": false,
+            "flag_lesson": false
+        },
+        {
+            "week": "星期二",
+            "cancel": "1",
+            "year": "2018",
+            "month": "4",
+            "day": "25",
+            "start": "9:00",
+            "end": "9:25",
+            "name": "ttt",
+            "icon": "http://admin.shooincareer.com/File/other/fa00cbf00a4c0ede893f76980bea4307.jpg",
+            "id": "11",
+            "lesson_link": "http://admin.shooincareer.com/File/zip/3b63f827304977aad248c6d81e244f54/content/index.html",
+            "pre_link": "http://admin.shooincareer.com/File/zip/a15f510bef47b6d33044db5ffb8de82b/content/index.html",
+            "home_link": "http://admin.shooincareer.com/File/zip/6a669b580d560104216907be7d6d8cf8/content/index.html",
+            "flag_home": false,
+            "flag_pre": false,
+            "flag_lesson": false
+        },
+        {
+            "week": "星期二",
+            "cancel": "1",
+            "year": "2018",
+            "month": "4",
+            "day": "27",
+            "start": "9:00",
+            "end": "9:25",
+            "name": "hhh",
+            "icon": "http://admin.shooincareer.com/File/other/e88e509d9246468403f241d63b4b0d8d.jpg",
+            "id": "12",
+            "lesson_link": "http://admin.shooincareer.com/File/zip/b8b397e1576e48f7bc3104e60e21147f/content/index.html",
+            "pre_link": "http://admin.shooincareer.com/File/zip/ed7e231bae28be490cb88731dec6d507/content/index.html",
+            "home_link": "http://admin.shooincareer.com/File/zip/eb38bc4af9550b84a83384d5941e7d68/content/index.html",
+            "flag_home": false,
+            "flag_pre": false,
+            "flag_lesson": false
+        }
+    ]
+}

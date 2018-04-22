@@ -156,7 +156,6 @@ function MD5(str) {
 	}
 
 	function makeParams(action, param) {
-        console.log(param);
 		return {
 			app_id: APP_ID,
 			m: M,

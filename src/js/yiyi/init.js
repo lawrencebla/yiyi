@@ -72,6 +72,15 @@
 			.find('.notification-list').empty();
 
 		var phone = global.getPhone();
+
+		global.yjax('user_info', {
+			phone: phone,
+		}, function(data) {
+			if( data.code === 0 ) {
+				$('.author-name>.author-title>svg').before(data.name);
+				$('#header-account>.author-thumb>img').prop('src', data.icon);
+			}
+		});
 		global.yjax('status', {
 			phone: phone,
 			page: 1,
@@ -209,6 +218,16 @@
 		return +(global.yookie.get('phone') || 18253591067);
 	}
 
-	initTopbar();
-	initSidebar();
+	if( global.getPhone() ) {
+		initTopbar();
+		initSidebar();
+	} else {
+		global.document.location.href = 'login.html';
+	}
+
+	$('#logout-button').click(function() {
+		global.yookie.set('phone', '');
+		global.document.location.href = 'login.html';
+	})
+
 })(window, jQuery);

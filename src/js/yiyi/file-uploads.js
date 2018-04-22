@@ -58,6 +58,7 @@
 	}
 	$('.upload-file-btn').click(function() {
 		var form = $('#upload-file-form');
+		$('input[name="name"]').val($('input[name="name"]').val() + ext);
 		global.yploadForm('upload_file', $('#upload-file-form'), function(data) {
 			global.document.location.reload();
 		});
@@ -71,6 +72,7 @@
 		});
 	});
 
+	var ext = '';
 	$('.file-input').on('change', function(e) {
 		var fileName = e.target.files[0].name;
 		if( imgReg.test(fileName) ) {
@@ -80,8 +82,10 @@
 		} else {
 			upload_file_type = 0;
 		}
+		ext = fileName.substr(fileName.lastIndexOf('.'));
 		$('.file-input-label').text(fileName);
-		$('input[name="name"]').val(fileName);
+		$('input[name="type"]').val(upload_file_type);
+		$('input[name="name"]').val(fileName.substr(0, fileName.lastIndexOf('.')));
 	});
 
 	$('#upload-file-form').on('click', '.dropdown-menu.inner>li', function() {
@@ -96,7 +100,9 @@
 			file_list.map( function(file) {
 				if( id == file.id ) {
 					lesson_id = file.lesson_id;
-					name = file.name;
+					name = file.name.substr(0, file.name.lastIndexOf('.'));
+					ext = file.name.substr(file.name.lastIndexOf('.'));
+					$('.file-input-label').text(file.name);
 				}
 			} );
 		} else {
@@ -112,7 +118,6 @@
 		} );
 		$('input[name="lesson_id"]').val(lesson_id);
 		$('input[name="name"]').val(name);
-		// $('input[name="lesson_id"]').val('');
 		$('input[name="file"]').val('');
 		$('input[name="phone"]').val(global.getPhone());
 	});
