@@ -1,0 +1,1 @@
+CRUMINA.FormValidation=function(){$(".needs-validation").each(function(){var t=$(this)[0];t.addEventListener("submit",function(a){0==t.checkValidity()&&(a.preventDefault(),a.stopPropagation()),t.classList.add("was-validated")},!1)})},$(document).ready(function(){CRUMINA.FormValidation()});

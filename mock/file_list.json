@@ -1,61 +1,104 @@
 {
     "code": 0,
-    "list": [
-        {
-            "id": "1",
-            "name": "file1.jpg",
-            "lesson_id": 9,
-            "lesson_name": "lesson1",
-            "user_name": "Lawrence",
-            "user_icon": "/img/friend-harmonic1.jpg"
-        },
-        {
-            "id": "2",
-            "name": "file2.doc",
-            "lesson_id": 10,
-            "lesson_name": "lesson2",
-            "user_name": "Lawrence",
-            "user_icon": "/img/friend-harmonic1.jpg"
-        },
-        {
-            "id": "3",
-            "name": "file3.pdf",
-            "lesson_id": 10,
-            "lesson_name": "lesson3",
-            "user_name": "Lawrence",
-            "user_icon": "/img/friend-harmonic1.jpg"
-        },
-        {
-            "id": "4",
-            "name": "file4.html",
-            "lesson_id": 10,
-            "lesson_name": "lesson4",
-            "user_name": "Lawrence",
-            "user_icon": "/img/friend-harmonic1.jpg"
-        },
-        {
-            "id": "6",
-            "name": "file6.docx",
-            "lesson_id": 10,
-            "lesson_name": "lesson6",
-            "user_name": "Lawrence",
-            "user_icon": "/img/friend-harmonic1.jpg"
-        },
-        {
-            "id": "7",
-            "name": "file7.pptx",
-            "lesson_id": 10,
-            "lesson_name": "lesson7",
-            "user_name": "Lawrence",
-            "user_icon": "/img/friend-harmonic1.jpg"
-        },
-        {
-            "id": "8",
-            "name": "file8.txt",
-            "lesson_id": 10,
-            "lesson_name": "lesson8",
-            "user_name": "Lawrence",
-            "user_icon": "/img/friend-harmonic1.jpg"
-        }
-    ]
+    "list": [{
+        "file_id": "29",
+        "name": "pic.jpeg",
+        "url": "https:\/\/api.shooincareer.com\/File\/other\/176ce2e185806e6699eae9fb190d50d5.jpg",
+        "ymd": "2018-04-28",
+        "user_id": "1",
+        "user_icon": "https:\/\/api.shooincareer.com\/File\/avatar\/1\/avatar.jpg",
+        "lesson": "666",
+        "lesson_id": "2",
+        "type": 1
+    }, {
+        "file_id": "28",
+        "name": "file.mp4",
+        "url": "https:\/\/api.shooincareer.com\/File\/other\/7492cf5a733548b5ee49a3be6fee1b45.mp4",
+        "ymd": "2018-04-26",
+        "user_id": "1",
+        "user_icon": "https:\/\/api.shooincareer.com\/File\/avatar\/1\/avatar.jpg",
+        "lesson": "666",
+        "lesson_id": "2",
+        "type": 2
+    }, {
+        "file_id": "27",
+        "name": "pic.jpeg",
+        "url": "https:\/\/api.shooincareer.com\/File\/other\/d2e31406a9d9084ee6f749657ff1de07.jpg",
+        "ymd": "2018-04-23",
+        "user_id": "1",
+        "user_icon": "https:\/\/api.shooincareer.com\/File\/avatar\/1\/avatar.jpg",
+        "lesson": "3",
+        "lesson_id": "10",
+        "type": 1
+    }, {
+        "file_id": "26",
+        "name": "aaa",
+        "url": "https:\/\/api.shooincareer.com\/File\/other\/4c0790db8f219c797a5456a4ac1051d3.jpg",
+        "ymd": "2018-04-18",
+        "user_id": "1",
+        "user_icon": "https:\/\/api.shooincareer.com\/File\/avatar\/1\/avatar.jpg",
+        "lesson": "Test Lesson",
+        "lesson_id": "8",
+        "type": 1
+    }, {
+        "file_id": "23",
+        "name": "",
+        "url": "https:\/\/api.shooincareer.com\/File\/other\/bd4c4ecb6bd31492dfa0f00f52b21fdf.jpg",
+        "ymd": "2018-04-14",
+        "user_id": "1",
+        "user_icon": "https:\/\/api.shooincareer.com\/File\/avatar\/1\/avatar.jpg",
+        "lesson": null,
+        "lesson_id": null,
+        "type": 1
+    }, {
+        "file_id": "22",
+        "name": "",
+        "url": "https:\/\/api.shooincareer.com\/File\/other\/8ffa08d408ee2a78a81fecb0f3bc4ec2.mp4",
+        "ymd": "2018-04-14",
+        "user_id": "1",
+        "user_icon": "https:\/\/api.shooincareer.com\/File\/avatar\/1\/avatar.jpg",
+        "lesson": null,
+        "lesson_id": null,
+        "type": 2
+    }, {
+        "file_id": "21",
+        "name": "",
+        "url": "https:\/\/api.shooincareer.com\/File\/other\/0fc3886e73eef0cd4cc91f5d576516f4.mp4",
+        "ymd": "2018-04-14",
+        "user_id": "1",
+        "user_icon": "https:\/\/api.shooincareer.com\/File\/avatar\/1\/avatar.jpg",
+        "lesson": null,
+        "lesson_id": null,
+        "type": 2
+    }, {
+        "file_id": "20",
+        "name": "",
+        "url": "https:\/\/api.shooincareer.com\/File\/other\/013b3e58475540aa4d7a7a0b3529d014.mp4",
+        "ymd": "2018-04-14",
+        "user_id": "1",
+        "user_icon": "https:\/\/api.shooincareer.com\/File\/avatar\/1\/avatar.jpg",
+        "lesson": null,
+        "lesson_id": null,
+        "type": 2
+    }, {
+        "file_id": "19",
+        "name": "",
+        "url": "https:\/\/api.shooincareer.com\/File\/other\/86fcd41fa4b6a0829ca04a77fd4dc531.mp4",
+        "ymd": "2018-04-14",
+        "user_id": "1",
+        "user_icon": "https:\/\/api.shooincareer.com\/File\/avatar\/1\/avatar.jpg",
+        "lesson": null,
+        "lesson_id": null,
+        "type": 2
+    }, {
+        "file_id": "18",
+        "name": "",
+        "url": "https:\/\/api.shooincareer.com\/File\/other\/5f3a52041faeb627dd278a6cfafa07d3.mp4",
+        "ymd": "2018-04-14",
+        "user_id": "1",
+        "user_icon": "https:\/\/api.shooincareer.com\/File\/avatar\/1\/avatar.jpg",
+        "lesson": null,
+        "lesson_id": null,
+        "type": 2
+    }]
 }

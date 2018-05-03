@@ -1,0 +1,19 @@
+{
+	"code": 0,
+	"list": [
+		{
+			"channel": 0,
+			"title": "Chapter1",
+			"num": 10,
+			"money": 40,
+			"ymd": "2010-09-09"
+		},
+		{
+			"channel": 1,
+			"title": "Chapter2",
+			"num": 20,
+			"money": 30,
+			"ymd": "2010-09-08"
+		}
+	]
+}

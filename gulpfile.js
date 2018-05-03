@@ -34,10 +34,10 @@ gulp.task('sass', function() {
 		.pipe( sourcemap.init() ) 
         .pipe(sass())
 		.pipe(prefixer())
-		// .pipe(cssmin())
-		// .pipe(rename({
-		// 	suffix: '.min'
-		// }))
+		.pipe(cssmin())
+		.pipe(rename({
+			suffix: '.min'
+		}))
 		.pipe( sourcemap.write( './maps' ) ) 
 		.pipe(gulp.dest('./src/css'))
         .pipe(gulp.dest('./app/css'));
@@ -62,6 +62,10 @@ gulp.task('js', function () {
 	gulp.src('src/js/*.js')
 		.pipe(uglify())
 		.pipe(gulp.dest('./app/js'));
+
+	gulp.src('src/js/yiyi/*.js')
+		// .pipe(uglify())
+		.pipe(gulp.dest('./app/js/yiyi'));
 
 	gulp.src(jsfilesInit)
 		.pipe(concat('base-init.js'))
@@ -107,11 +111,11 @@ gulp.task('images', function(){
         })))
         .pipe(gulp.dest('app/img'));
 
-	gulp.src('src/screenshots/*')
-		.pipe(cache(imagemin({
-			interlaced: true
-		})))
-		.pipe(gulp.dest('app/screenshots'));
+	// gulp.src('src/screenshots/*')
+	// 	.pipe(cache(imagemin({
+	// 		interlaced: true
+	// 	})))
+	// 	.pipe(gulp.dest('app/screenshots'));
 });
 
 gulp.task('compress', function() {
@@ -119,9 +123,9 @@ gulp.task('compress', function() {
 		.pipe(imagemin())
 		.pipe(gulp.dest('app/img'));
 
-	gulp.src('src/screenshots/*')
-		.pipe(imagemin())
-		.pipe(gulp.dest('app/screenshots'));
+	// gulp.src('src/screenshots/*')
+	// 	.pipe(imagemin())
+	// 	.pipe(gulp.dest('app/screenshots'));
 });
 
 
@@ -153,14 +157,15 @@ gulp.task('svg-min', function () {
 /*============= Copy Files unchanged ==============*/
 
 gulp.task('copy-files', function() {
+	
     gulp.src('src/fonts/**/*')
         .pipe(gulp.dest('app/fonts'));
 
-	gulp.src('src/mp3/*.*')
-		.pipe(gulp.dest('app/mp3'));
+	// gulp.src('src/mp3/*.*')
+	// 	.pipe(gulp.dest('app/mp3'));
 
-	gulp.src('src/videos/*.*')
-		.pipe(gulp.dest('app/videos'));
+	// gulp.src('src/videos/*.*')
+	// 	.pipe(gulp.dest('app/videos'));
 
 	gulp.src('src/svg-icons/sprites/*.svg')
 		.pipe(gulp.dest('app/svg-icons/sprites'));
@@ -180,16 +185,18 @@ gulp.task('clean-app', function(){
 /*============= Handlebars ==============*/
 
 gulp.task('html', function() {
-	return gulp.src('src/pages-sources/*.hbs')
-		.pipe(handlebars({}, {
-			ignorePartials: true,
-			batch: ['src/partials/']
-		}))
-		.pipe(rename({
-			extname: '.html'
-		}))
-		.pipe(gulp.dest('src'))
-		.pipe(gulp.dest('app'))
+	return gulp.src('src/*.html')
+				.pipe(gulp.dest('app'));
+	// return gulp.src('src/pages-sources/*.hbs')
+	// 	.pipe(handlebars({}, {
+	// 		ignorePartials: true,
+	// 		batch: ['src/partials/']
+	// 	}))
+	// 	.pipe(rename({
+	// 		extname: '.html'
+	// 	}))
+	// 	.pipe(gulp.dest('src'))
+	// 	.pipe(gulp.dest('app'))
 });
 
 
