@@ -73,7 +73,7 @@
 		var form = $('#upload-file-form');
 		$('input[name="name"]').val($('input[name="name"]').val() + ext);
 		global.yploadForm('upload_file', $('#upload-file-form'), function(data) {
-			global.document.location.reload();
+			// global.document.location.reload();
 		});
 	});
 	var ext = '';
@@ -94,7 +94,7 @@
 	$('#upload-file-modal').on('show.bs.modal', function(e) {
 		var id = $(e.relatedTarget.parentNode).attr('data-id');
 		var name = $(e.relatedTarget.parentNode).attr('data-name');
-		$('#upload-file-modal .ui-block-title>.title').text('File Upload to ' + name + ' lesson');
+		$('#upload-file-modal .ui-block-title>.title').text('上传文件到课程：' + name);
 		$('input[name="lesson_id"]').val(id);
 		$('input[name="name"]').val('');
 		$('input[name="file"]').val('');

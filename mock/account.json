@@ -1,0 +1,17 @@
+{
+	"code": 0,
+	"account": {
+		"avatar": "img/avatar56-sm.jpg",
+		"username": "username",
+		"e_name": "english name",
+		"sex": 1,
+		"birthday": "2016-08-09",
+		"phone": 13012345678,
+		"wx": "my_chat",
+		"email": "blandys@qq.com",
+		"address": "my address",
+		"city": "my city",
+		"state": "my state",
+		"country": "country"
+	}
+}

@@ -1,10 +1,10 @@
 {
 	"code": 0,
 	"username": "username",
-	"relationship": "father",
+	"relation": "father",
 	"birthday": "2016-08-09",
 	"phone": 13012345678,
-	"wechat": "my_chat",
+	"wx": "my_chat",
 	"email": "blandys@qq.com",
 	"address": "my address",
 	"city": "my city",

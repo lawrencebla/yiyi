@@ -235,7 +235,7 @@ function MD5(str) {
         param.timestamp = +Date.now().toString().substr(0, 10);
         var sortParam = {};
         Object.keys(param).sort().map(function(key){
-            sortParam[key] = param[key];
+            sortParam[key] = global.escape(param[key]);
         });
         var serializeParam = makeParams(action, sortParam);
         var formData = new FormData();
@@ -254,10 +254,11 @@ function MD5(str) {
             cache: false,
             data: formData,
             processData: false,
-            contentType: false
+            contentType: false,
+            // contentType: 'multipart/form-data; charset=UTF-8',
         }).done(function(res) {
-            var result = JSON.parse(res);
-            cb(result);
+            // var result = JSON.parse(res);
+            cb();
         }).fail(function(res) {}); 
     }
 })(window, jQuery);
