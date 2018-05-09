@@ -39,6 +39,10 @@
 	.radio label span {
 		top: 5px;
 	}
+	.pay-qr-img {
+		margin: 20px 0;
+    	text-align: center;
+	}
 	</style>
 
 </head>
@@ -258,13 +262,34 @@
 			</div> -->
 			<div class="radio">
 				<label>
-					<input type="radio" name="optionsRadios" checked>
+					<input type="radio" class="options-radios" name="optionsRadios" checked data-type='wxpay'>
+					<img style="height: 25px;" class="first-img"  src="img/wechat.jpg">Wechat
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" class="options-radios" name="optionsRadios" data-type='alipay'>
 					<img style="height: 25px;" class="first-img"  src="img/alipay.jpeg">支付宝
 				</label>
 			</div>
 			<a href="javascript:void(0)" class="pay-button btn btn-blue btn-lg full-width">购买</a>
 		</div>
 	</div>
+
+<div class="modal fade" id="pay-qr">
+	<div class="modal-dialog ui-block window-popup create-friend-group upload-file-modal">
+		<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
+			<svg class="olymp-close-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-close-icon"></use></svg>
+		</a>
+
+		<div class="ui-block-title">
+			<h6 class="title">扫码支付</h6>
+		</div>
+		<div class="pay-qr-img">
+			<img style="height: 400px; width: 400px;" src="">
+		</div>
+	</div>
+</div>
 </div>
 
 

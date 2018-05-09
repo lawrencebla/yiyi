@@ -17,17 +17,17 @@
 		if( data.code === 0 ) {
 			data = data.parent;
 			var container = $('#family_info_form');
-			container.find('input[name="username"]').val(global.unescape(data.username));
 			if( data.username ) {
+				container.find('input[name="username"]').val(global.unescape(data.username));
 				container.find('input[name="username"]').parent().removeClass('is-empty');
 			}
-			container.find('input[name="relation"]').val(global.unescape(data.relation));
 			if( data.relation ) {
+				container.find('input[name="relation"]').val(global.unescape(data.relation));
 				container.find('input[name="relation"]').parent().removeClass('is-empty');
 			}
 			container.find('input[name="birthday"]')
 				.daterangepicker({
-					startDate: data.birthday,
+					startDate: data.birthday || undefined,
 					autoUpdateInput: false,
 					singleDatePicker: true,
 					showDropdowns: true,
@@ -49,24 +49,24 @@
 				})
 				.val(data.birthday);
 			container.find('input[name="phone"]').val(global.getPhone());
-			container.find('input[name="parent_phone"]').val(data.phone);
 			if( data.phone ) {
+				container.find('input[name="parent_phone"]').val(data.phone);
 				container.find('input[name="parent_phone"]').parent().removeClass('is-empty');
 			}
-			container.find('input[name="wx"]').val(data.wx);
 			if( data.wx ) {
+				container.find('input[name="wx"]').val(data.wx);
 				container.find('input[name="wx"]').parent().removeClass('is-empty');
 			}
-			container.find('input[name="email"]').val(data.email);
 			if( data.email ) {
+				container.find('input[name="email"]').val(data.email);
 				container.find('input[name="email"]').parent().removeClass('is-empty');
 			}
-			container.find('input[name="address"]').val(global.unescape(data.address));
 			if( data.address ) {
+				container.find('input[name="address"]').val(global.unescape(data.address));
 				container.find('input[name="address"]').parent().removeClass('is-empty');
 			}
-			container.find('input[name="pca"]').val(global.unescape(data.pca));
 			if( data.pca ) {
+				container.find('input[name="pca"]').val(global.unescape(data.pca));
 				container.find('input[name="pca"]').parent().removeClass('is-empty');
 			}
 		}

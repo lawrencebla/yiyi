@@ -5,6 +5,7 @@
 		1: 'Alipay',
 	}
 	var pay_id;
+	var method = 'wxpay';
 	function appendChild(container) {
 		return function(item) {
 			pay_id = item.pay_id;
@@ -17,12 +18,22 @@
 		}
 	}
 
+	$('.options-radios').click(function() {
+		$('.options-radios').prop('checked', false);
+		method = $(this).prop('checked', true).attr('data-type');
+	})
+
 	$('.pay-button').click(function() {
-		global.yjax('alipay', {
+		global.yjax(method, {
 			phone: global.getPhone(),
 			pay_id: pay_id,
 		}, function(data) {
-			console.log(data);
+			if( data.code === 0 ) {
+				$('#pay-qr').modal('toggle');
+				$('#pay-qr').find('img').attr('src', data.pay_url);
+			} else {
+				alert(data.msg);
+			}
 		});
 	});
 

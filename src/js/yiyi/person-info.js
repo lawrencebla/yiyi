@@ -77,23 +77,25 @@
 			var basicContainer = $('#person_info_basic_form');
 			var container = $('#person_info_form');
 			basicContainer.find('.post__author>img').prop('src', data.avatar);
-			basicContainer.find('input[name="username"]').val(global.unescape(data.username));
 			if( data.username ) {
+				basicContainer.find('input[name="username"]').val(global.unescape(data.username));
 				basicContainer.find('input[name="username"]').parent().removeClass('is-empty');
 			}
-			container.find('input[name="english_name"]').val(global.unescape(data.e_name));
 			if( data.e_name ) {
+				container.find('input[name="english_name"]').val(global.unescape(data.e_name));
 				container.find('input[name="english_name"]').parent().removeClass('is-empty');
 			}
-			container.find('input[name="sex"]').val(global.unescape(data.sex));
-			container.find('.filter-option.pull-left').text(SEX_MAP_TEXT[data.sex]);
-			container.find('.selectpicker.form-control').val(global.unescape(data.sex))
-				.on('change', function(e) {
-					container.find('input[name="sex"]').val($(this).val());
-				});
+			if( data.sex !== null && data.sex !== undefined ) {
+				container.find('input[name="sex"]').val(global.unescape(data.sex));
+				container.find('.filter-option.pull-left').text(SEX_MAP_TEXT[data.sex]);
+				container.find('.selectpicker.form-control').val(global.unescape(data.sex))
+					.on('change', function(e) {
+						container.find('input[name="sex"]').val($(this).val());
+					});
+			}
 			container.find('input[name="birthday"]')
 				.daterangepicker({
-					startDate: data.birthday,
+					startDate: data.birthday || undefined,
 					autoUpdateInput: false,
 					singleDatePicker: true,
 					showDropdowns: true,
@@ -114,24 +116,24 @@
 					}
 				})
 				.val(data.birthday);
-			container.find('input[name="phone"]').val(data.phone);
 			if( data.phone ) {
+				container.find('input[name="phone"]').val(data.phone);
 				container.find('input[name="phone"]').parent().removeClass('is-empty');
 			}
-			container.find('input[name="wechat"]').val(data.wx);
 			if( data.wx ) {
+				container.find('input[name="wechat"]').val(data.wx);
 				container.find('input[name="wechat"]').parent().removeClass('is-empty');
 			}
-			container.find('input[name="email"]').val(data.email);
 			if( data.email ) {
+				container.find('input[name="email"]').val(data.email);
 				container.find('input[name="email"]').parent().removeClass('is-empty');
 			}
-			container.find('input[name="address"]').val(global.unescape(data.address));
 			if( data.address ) {
+				container.find('input[name="address"]').val(global.unescape(data.address));
 				container.find('input[name="address"]').parent().removeClass('is-empty');
 			}
-			container.find('input[name="pca"]').val(global.unescape(data.pca));
 			if( data.pca ) {
+				container.find('input[name="pca"]').val(global.unescape(data.pca));
 				container.find('input[name="pca"]').parent().removeClass('is-empty');
 			}
 			// container.find('input[name="state"]').val(global.unescape(data.state));
