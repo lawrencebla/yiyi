@@ -16,7 +16,8 @@
 			template.find('.author-thumb>img').prop('src', item.icon);
 			template.find('.author-name').text(item.name)
 				.prop('href', item.lesson_link);
-			template.find('.country').text(item.start + '~' + item.end);
+			template.find('.date').text( item.year + '年' + ++item.month + '月' + item.day + '日' );
+			template.find('.country').text( item.start + '~' + item.end);
 			
 			template.find('.home-link').prop('href', item.home_link);
 			template.find('.lesson-link').prop('href', item.lesson_link);
@@ -25,18 +26,23 @@
 			if( item.cancel === '0' ) {
 				template.find('.more').css('display', 'none');
 			}
+			template.find('.cancel-class').click(function(e) {
+				$('.more-dropdown.show').removeClass('show');
+				e.stopPropagation();
+				if( confirm('确认取消课程：' + item.name + '?') ) {
 
-			template.find('.cancel-class').click(function() {
-				global.yjax('cancel', {
-					phone: global.getPhone(),
-					lesson_id: item.id,
-				}, function(data) {
-					if( data.code === 0 ) {
-						$('#lesson_item' + item.id).remove();
-					} else {
-						alert(data.msg);
-					}
-				})
+					global.yjax('cancel', {
+						phone: global.getPhone(),
+						lesson_id: item.id,
+					}, function(data) {
+						if( data.code === 0 ) {
+							$('#lesson_item' + item.id).remove();
+						} else {
+							alert(data.msg);
+						}
+					})
+
+				}
 			})
 
 			container.append(template);
@@ -99,6 +105,15 @@
 		$('input[name="name"]').val('');
 		$('input[name="file"]').val('');
 		$('input[name="phone"]').val(global.getPhone());
+	});
+
+	$(document).on('click', '.more', function() {
+		$(this).find('.more-dropdown').addClass('show');
+	});
+	$(document).on('click', function(e) {
+		if( e.target.className !== 'more' && e.target.parentNode.className !== 'more' && e.target.parentNode.parentNode.className !== 'more' && e.target.className !== 'more-dropdown show' && e.target.parentNode.className !== 'more-dropdown show' && e.target.parentNode.parentNode.className !== 'more-dropdown show' ) {
+			$('.more-dropdown.show').removeClass('show');
+		}
 	});
 
 })(window, jQuery);

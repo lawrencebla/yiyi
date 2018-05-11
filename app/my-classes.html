@@ -58,6 +58,38 @@
 	.c-grey {
 		border-color: #e2e3ec;
 	}
+	.top-header-thumb:after {
+		content: '我的课程';
+	}
+	.control-block-button .btn-control:after {
+		position: absolute;
+	    color: #515365;
+	    bottom: -40px;
+	    left: 12px;
+	    font-size: 14px;
+	}
+	.control-block-button .btn-control:hover:after {
+		color: #ff5e3a;
+	}
+	.pre-link:after {
+		content: '预习';
+	}
+	.lesson-link:after {
+		content: '主课';
+	}
+	.home-link:after {
+		content: '作业';
+	}
+	/*.more:hover .more-dropdown {
+		visibility: hidden;
+    	opacity: 0;
+    	transition-delay: 0.3s, 0s;
+	}*/
+	.more-dropdown.show {
+		visibility: visible;
+    	opacity: 1;
+    	transition-delay: 0s;
+	}
 	</style>
 </head>
 <body>
@@ -84,9 +116,10 @@
 					</div>
 					<div class="author-content">
 						<a href="#" class="h5 author-name"></a>
+						<div class="date"></div>
 						<div class="country"></div>
 					</div>
-					<button style="margin-top: 30px;" class=" btn btn-primary btn-md-2" data-toggle="modal"  data-target="#upload-file-modal">上传文件 +</button>
+					<button style="margin-top: 20px;" class=" btn btn-primary btn-md-2" data-toggle="modal"  data-target="#upload-file-modal">上传文件 +</button>
 				</div>
 				<div style="margin-bottom: 0px;" class="swiper-container" data-slide="fade">
 					<div class="swiper-wrapper">
@@ -106,15 +139,15 @@
 								</a> -->
 							</div>
 							<div class="control-block-button" data-swiper-parallax="-100">
-								<a style="background-color: #1ed760" href="#" class="btn btn-control bg-spotify home-link">
+								<a target="_blank" style="background-color: #1ed760" href="#" class="btn btn-control bg-spotify pre-link">
 									<svg class="olymp-check-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-check-icon"></use></svg>
 								</a>
-								<a style="background-color: #fab819" href="#" class="btn btn-control bg-rss lesson-link">
+								<a target="_blank" style="background-color: #fab819" href="#" class="btn btn-control bg-rss lesson-link">
 									<svg class="olymp-newsfeed-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-newsfeed-icon"></use></svg>
 								</a>
 		
-								<a style="background-color: #fab819" href="#" class="btn btn-control bg-rss pre-link">
-									<svg class="olymp-newsfeed-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-newsfeed-icon"></use></svg>
+								<a target="_blank" style="background-color: #ffdc1b" href="#" class="btn btn-control bg-rss home-link">
+									<svg class="olymp-computer-icon"><use xlink:href="svg-icons/sprites/icons.svg#olymp-computer-icon"></use></svg>
 								</a>
 		
 							</div>
@@ -306,9 +339,9 @@
 						<div class="h6 title">我的课程</div>
 
 						<div class="align-right">
-							<a href="javascript:void(0)" class="btn btn-primary btn-lg upcoming-button">课程安排</a>
+							<a href="javascript:void(0)" class="btn btn-primary btn-lg upcoming-button"><div style="width: 70px">课程安排</div></a>
 
-							<a href="javascript:void(0)" class="btn-lg btn-border-think c-grey past-button">完成的课程</a>
+							<a href="javascript:void(0)" class="btn btn-lg btn-border-think c-grey past-button">完成的课程</a>
 						</div>
 
 						
