@@ -2,6 +2,7 @@
     "code": 0,
     "list": [
         {
+            "back_image": "http://admin.shooincareer.com/File/other/3b8fcdaac057170929e2f4e9609cd517.png",
             "week": "星期一",
             "cancel": "0",
             "year": "2018",
@@ -17,9 +18,11 @@
             "home_link": "http://admin.shooincareer.com/File/zip/9fdbc42f90d0284f9299cf981788d24f/demo/index.html",
             "flag_home": false,
             "flag_pre": false,
-            "flag_lesson": false
+            "flag_lesson": false,
+            "short_desc": "我们的身体部位该怎么说呢？一起来通过歌曲学一下吧！ 你见过小怪兽吗？它的身体有哪些部分呢？ 你能标记身体部分并完成词汇练习吗？你一定没问题的！"
         },
         {
+            "back_image": "http://admin.shooincareer.com/File/other/3b8fcdaac057170929e2f4e9609cd517.png",
             "week": "星期二",
             "cancel": "1",
             "year": "2018",
@@ -35,9 +38,11 @@
             "home_link": "http://admin.shooincareer.com/File/zip/6a669b580d560104216907be7d6d8cf8/content/index.html",
             "flag_home": false,
             "flag_pre": false,
-            "flag_lesson": false
+            "flag_lesson": false,
+            "short_desc": "我们的身体部位该怎么说呢？一起来通过歌曲学一下吧！ 你见过小怪兽吗？它的身体有哪些部分呢？ 你能标记身体部分并完成词汇练习吗？你一定没问题的！"
         },
         {
+            "back_image": "http://admin.shooincareer.com/File/other/3b8fcdaac057170929e2f4e9609cd517.png",
             "week": "星期二",
             "cancel": "1",
             "year": "2018",
@@ -53,7 +58,8 @@
             "home_link": "http://admin.shooincareer.com/File/zip/eb38bc4af9550b84a83384d5941e7d68/content/index.html",
             "flag_home": false,
             "flag_pre": false,
-            "flag_lesson": false
+            "flag_lesson": false,
+            "short_desc": "我们的身体部位该怎么说呢？一起来通过歌曲学一下吧！ 你见过小怪兽吗？它的身体有哪些部分呢？ 你能标记身体部分并完成词汇练习吗？你一定没问题的！"
         }
     ]
 }

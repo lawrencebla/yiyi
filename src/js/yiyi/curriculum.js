@@ -28,7 +28,7 @@
 		phone: global.getPhone(),
 	}, function(data) {
 		if( data.code === 0 ) {
-			$('.top-header-thumb>img').prop('src', data.unit_back_image);
+			// $('.top-header-thumb>img').prop('src', data.unit_back_image);
 			var container = $('.chapters-container>.row');
 			data.list.map( appendChild(container) );
 		}

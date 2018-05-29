@@ -22,6 +22,8 @@
 			template.find('.home-link').prop('href', item.home_link);
 			template.find('.lesson-link').prop('href', item.lesson_link);
 			template.find('.pre-link').prop('href', item.pre_link);
+			template.find('.short-desc').text(item.short_desc);
+			template.find('.friend-header-thumb>img').prop('src', item.back_image).css('opacity', 1);
 
 			if( item.cancel === '0' ) {
 				template.find('.more').css('display', 'none');

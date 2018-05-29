@@ -217,7 +217,7 @@
 		},
 	}
 	global.getPhone = function() {
-		return /*18253591067 || */+(global.yookie.get('phone'));
+		return 15510647790 || +(global.yookie.get('phone'));
 	}
 
 	if( global.document.location.pathname.indexOf('login.html') === -1 ) {

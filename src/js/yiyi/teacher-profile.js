@@ -3,7 +3,7 @@
 	function appendChild(container) {
 		return function(item) {
 
-			$('.top-header-thumb img').prop('src', item.banner);
+			// $('.top-header-thumb img').prop('src', item.banner);
 			$('.top-header-author .author-thumb img').prop('src', item.avatar);
 			$('.top-header-author .author-name').text(item.name);
 

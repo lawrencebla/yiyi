@@ -29,7 +29,7 @@
 			media_id: articleId
 		}, function(data) {
 			if( data.code === 0 ) {
-				$('.top-header-thumb>img').prop('src', data.media.icon)
+				$('.top-header-thumb>img').prop('src', data.media.banner)
 				var container = $('.container-content');
 				appendChild(container)(data.media);
 			}
