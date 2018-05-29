@@ -81,7 +81,7 @@
 		var form = $('#upload-file-form');
 		$('input[name="name"]').val($('input[name="name"]').val() + ext);
 		global.yploadForm('upload_file', $('#upload-file-form'), function(data) {
-			// global.document.location.reload();
+			global.document.location.reload();
 		});
 	});
 	var ext = '';

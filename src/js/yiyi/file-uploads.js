@@ -137,7 +137,7 @@
 			template.find('.file-uploads-user-name').text(item.user_name);
 			template.find('.file-name').text(filename);
 			template.find('.file-type').text(type);
-			template.find('.friend-avatar>.author-thumb').css('background-color', type2icon[type].color)
+			template.find('.friend-avatar>.author-thumb').prop('href', item.url).css('background-color', type2icon[type].color)
 				.find('.file-icon').addClass('fa fa-' + type2icon[type].class);
 			
 			container.append(template);
