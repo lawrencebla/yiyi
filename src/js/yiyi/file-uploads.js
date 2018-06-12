@@ -65,12 +65,14 @@
 	});
 
 	$(document).on('click', '.delete-file-upload', function() {
-		global.yjax('file_drop', {
-			phone: global.getPhone(),
-			file_id: $(this).parent().attr('data-id'),
-		}, function() {
-			global.document.location.reload();
-		});
+		if( confirm('确认删除文件?') ) {
+			global.yjax('file_drop', {
+				phone: global.getPhone(),
+				file_id: $(this).parent().attr('data-id'),
+			}, function() {
+				global.document.location.reload();
+			});
+		}
 	});
 
 	var ext = '';

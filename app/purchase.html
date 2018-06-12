@@ -47,6 +47,18 @@
 	.top-header-thumb:after {
 		content: '购买';
 	}
+	.product-subtotal {
+		position: relative;
+	}
+	.class-checkbox {
+		display: block !important;
+	    position: absolute;
+	    right: 40px;
+	    width: 20px;
+	    line-height: 77px;
+	    top: 0;
+	    height: 77px;
+	}
 	</style>
 
 </head>
@@ -68,6 +80,7 @@
 
 	<td class="product-subtotal">
 		<h6 class="total amount"></h6>
+		<input type="checkbox" class="class-checkbox"/>
 	</td>
 </tr>
 </script>
@@ -276,7 +289,7 @@
 					<img style="height: 25px;" class="first-img"  src="img/alipay.jpeg">支付宝
 				</label>
 			</div>
-			<a href="javascript:void(0)" class="pay-button btn btn-blue btn-lg full-width">购买</a>
+			<a href="javascript:void(0)" class="pay-button btn btn-blue btn-lg full-width disabled">购买</a>
 		</div>
 	</div>
 
