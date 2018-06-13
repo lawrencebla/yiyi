@@ -137,7 +137,7 @@
 			template.find('.post-thumb>img').prop('src', item.user_icon);
 			template.find('.file-uploads-user img').prop('src', item.user_icon);
 			template.find('.file-uploads-user-name').text(item.user_name);
-			template.find('.file-name').text(filename);
+			template.find('.file-name').text(filename).prop('href', item.url);
 			template.find('.file-type').text(type);
 			template.find('.friend-avatar>.author-thumb').prop('href', item.url).css('background-color', type2icon[type].color)
 				.find('.file-icon').addClass('fa fa-' + type2icon[type].class);
