@@ -1,8 +1,8 @@
 (function(global, $) {
 	var FILE_TYPE_IMAGE_REG = /(image\/png|image\/jpe?g|image\/bmp|image\/gif)/;
 	var SEX_MAP_TEXT = {
-		0: 'Male',
-		1: 'Female',
+		0: '男',
+		1: '女',
 	};
 	function appendChild(container) {
 		return function(item) {
@@ -93,9 +93,13 @@
 						container.find('input[name="sex"]').val($(this).val());
 					});
 			}
+			var birthday = data.birthday;
+			if( isNaN(new Date(birthday).getDay()) ) {
+				birthday = undefined;
+			}
 			container.find('input[name="birthday"]')
 				.daterangepicker({
-					startDate: data.birthday || undefined,
+					startDate: birthday || undefined,
 					autoUpdateInput: false,
 					singleDatePicker: true,
 					showDropdowns: true,
@@ -115,7 +119,7 @@
 						$(this).closest('.form-group').removeClass('is-focused');
 					}
 				})
-				.val(data.birthday);
+				.val(birthday);
 			if( data.phone ) {
 				container.find('input[name="phone"]').val(data.phone);
 				container.find('input[name="phone"]').parent().removeClass('is-empty');

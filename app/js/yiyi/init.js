@@ -37,6 +37,8 @@
 
 	function initSidebar() {
 
+		$('.fixed-sidebar-left .logo').css('background-color', '#565c86').find('.title-block').empty().append('<img class="" src="img/logo.png">');
+
 		var id2file = {
 			'side-home': 'index.html|article.html',
 			'side-notification': 'notifications.html|progress-feedbacks.html',
@@ -56,8 +58,12 @@
 			var $link = $leftMenu.find('#' + id + '>a');
 			if( 
 				(currentFile && filesName.indexOf(currentFile) !== -1 )|| 
-				( currentPath.indexOf('.html') === -1 && filesName.indexOf('index.html') === 0 ) ) {
+				( currentPath.indexOf('.html') === -1 && filesName.indexOf('index.html') === 0 ) 
+			) {
 				$link.addClass('actived');
+			}
+			if( id === 'side-teacher-profile' ) {
+				$link.find('svg').css('margin-right', '22px');
 			}
 			$link.prop('href', filesName.split('|')[0]);
 		}
@@ -222,8 +228,8 @@
 
 	if( global.document.location.pathname.indexOf('login.html') === -1 ) {
 		if( global.getPhone() ) {
-			initTopbar();
 			initSidebar();
+			initTopbar();
 		} else {
 			global.document.location.href = 'login.html';
 		}

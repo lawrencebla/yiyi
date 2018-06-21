@@ -45,7 +45,8 @@
 		if( !$('.pay-button').hasClass('disabled') ) {
 			global.yjax(method, {
 				phone: global.getPhone(),
-				pay_id: pay_id,
+				// pay_id: pay_list,
+				pay_ids: pay_list,
 			}, function(data) {
 				if( data.code === 0 ) {
 					$('#pay-qr').modal('toggle');

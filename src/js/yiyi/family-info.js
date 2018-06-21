@@ -25,9 +25,13 @@
 				container.find('input[name="relation"]').val(global.unescape(data.relation));
 				container.find('input[name="relation"]').parent().removeClass('is-empty');
 			}
+			var birthday = data.birthday;
+			if( isNaN(new Date(birthday).getDay()) ) {
+				birthday = undefined;
+			}
 			container.find('input[name="birthday"]')
 				.daterangepicker({
-					startDate: data.birthday || undefined,
+					startDate: birthday || undefined,
 					autoUpdateInput: false,
 					singleDatePicker: true,
 					showDropdowns: true,
@@ -47,7 +51,7 @@
 						$(this).closest('.form-group').removeClass('is-focused');
 					}
 				})
-				.val(data.birthday);
+				.val(birthday);
 			container.find('input[name="phone"]').val(global.getPhone());
 			if( data.phone ) {
 				container.find('input[name="parent_phone"]').val(data.phone);

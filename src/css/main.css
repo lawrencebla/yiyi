@@ -3926,9 +3926,10 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
 .friend-header-thumb {
   border-bottom: 1px solid #e6ecf5;
   overflow: hidden;
-  background-color: #ff5e3a; }
+  text-align: center;
+  background-color: #fff; }
   .friend-header-thumb img {
-    width: 100%;
+    max-width: 100%;
     opacity: 0; }
 
 .friend-item {

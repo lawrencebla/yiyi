@@ -28,9 +28,28 @@
 	<link rel="stylesheet" type="text/css" href="css/main.min.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.min.css">
 	<style type="text/css">
-		
+	.post-thumb img {
+		width: 380px;
+		height: 380px;
+	}
 	.top-header-thumb:after {
 		content: '课程介绍';
+	}
+	.post-content .post-category {
+		width: 200px;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		font-size: 18px;
+		padding: 0;
+		border-radius: 6px;
+	}
+	.friend-count-item .title {
+		font-size: 36px;
+		margin-bottom: 20px;
+	}
+	.friend-count-item .title {
+		font-size: 22px
 	}
 	</style>
 </head>
@@ -39,19 +58,19 @@
 
 <script type="text/yemplate" id='chapters'>
 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 sorting-item community">
-	<div class="ui-block">
+	<div class="ui-block" style="margin-bottom: 60px">
 		<article class="hentry blog-post blog-post-v2">
 			<div class="post-thumb">
-				<img style="height: 364px;" src="img/post1.jpg" alt="photo">
+				<img src="img/post1.jpg" alt="photo">
 			</div>
 			<div class="post-content">
-				<a href="#" class="post-category bg-blue-light" style='padding: 8px 50px;'></a>
-				<a href="#" class="post-title" style="color: #888da7"></a>
+				<a href="#" class="post-category bg-blue-light"></a>
+				<a href="#" class="post-title" style="color: #888da7;font-size: 16px;"></a>
 			</div>
 			<div class="friend-count" data-swiper-parallax="-500">
 				<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
 					<div class="level-num">-</div>
-					<div class="title">英语级别</div>
+					<div class="title">等级</div>
 				</a>
 				<a href="#" class="friend-count-item" style='font-size: 1.5rem;color: #888da7'>
 					<div class="words-num">-</div>
