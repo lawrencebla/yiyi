@@ -77,6 +77,8 @@
 			var basicContainer = $('#person_info_basic_form');
 			var container = $('#person_info_form');
 			basicContainer.find('.post__author>img').prop('src', data.avatar);
+			$('#site-header #header-account .author-thumb>img').prop('src', data.avatar);
+			global.yookie.set('avatar', data.avatar);
 			if( data.username ) {
 				basicContainer.find('input[name="username"]').val(global.unescape(data.username));
 				basicContainer.find('input[name="username"]').parent().removeClass('is-empty');

@@ -16,20 +16,23 @@
 			template.find('.total').text(item.money);
 			template.attr('data-id', item.pay_id);
 			template.find('.class-checkbox').click(function() {
-				var _payId = item.pay_id;
-				if( ~pay_list.indexOf(_payId) ) {
-					pay_list = pay_list.filter( function(payid) {
-						return payid !== _payId
-					} )
-				} else {
-					pay_list.push(_payId);
-				}
-				if( pay_list.length > 0 && $('.pay-button').hasClass('disabled') ) {
-					$('.pay-button').removeClass('disabled')
-				}
-				if( pay_list.length === 0 && ~$('.pay-button').hasClass('disabled') ) {
-					$('.pay-button').addClass('disabled')
-				}
+				pay_id = item.pay_id;
+				$('.pay-button').removeClass('disabled');
+				// if( ~pay_list.indexOf(_payId) ) {
+				// 	pay_list = pay_list.filter( function(payid) {
+				// 		return payid !== _payId
+				// 	} )
+				// } else {
+				// 	pay_list.push(_payId);
+				// }
+				// if( pay_list.length > 0 && $('.pay-button').hasClass('disabled') ) {
+				// 	$('.pay-button').removeClass('disabled')
+				// }
+				// if( pay_list.length === 0 && ~$('.pay-button').hasClass('disabled') ) {
+				// 	$('.pay-button').addClass('disabled')
+				// }
+
+				// $('.class-checkbox').
 
 			})
 			container.append(template);
@@ -45,8 +48,8 @@
 		if( !$('.pay-button').hasClass('disabled') ) {
 			global.yjax(method, {
 				phone: global.getPhone(),
-				// pay_id: pay_list,
-				pay_ids: pay_list,
+				pay_id: pay_id,
+				// pay_ids: pay_list,
 			}, function(data) {
 				if( data.code === 0 ) {
 					$('#pay-qr').modal('toggle');

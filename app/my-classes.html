@@ -80,17 +80,23 @@
 	.home-link:after {
 		content: '作业';
 	}
-	/*.more:hover .more-dropdown {
+
+	.friend-item-content .more:hover .more-dropdown.show {
+	  visibility: visible;
+	  opacity: 1;
+	  transition-delay:0s;
+	}
+	.friend-item-content .more:hover .more-dropdown {
 		visibility: hidden;
     	opacity: 0;
     	transition-delay: 0.3s, 0s;
-	}*/
+	}
 	.more-dropdown.show {
 		visibility: visible;
     	opacity: 1;
     	transition-delay: 0s;
 	}
-	.author-thumb {
+	.friend-item-content .author-thumb {
 		display: flex;
 		align-items: center;
 		text-align: center;
@@ -117,7 +123,7 @@
 				</div>
 				<div class="friend-avatar">
 					<div class="author-thumb">
-						<img style="max-width: 100px; max-height: 100px;" src="img/avatar1.jpg" alt="author">
+						<img style="width: 100px; height: 100px;" src="img/avatar1.jpg" alt="author">
 					</div>
 					<div class="author-content">
 						<a href="#" class="h5 author-name"></a>
