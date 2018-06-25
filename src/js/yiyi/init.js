@@ -37,6 +37,7 @@
 
 	function initSidebar() {
 
+		$('#side-purchases').css('display', 'none');
 		$('.fixed-sidebar-left .logo').css('background-color', '#565c86').find('.title-block').empty().append('<img class="" src="img/logo.png">');
 
 		var id2file = {
